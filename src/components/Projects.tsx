@@ -1,63 +1,98 @@
+import ProjectSchematic from './ProjectSchematic'
+
+type DiagramType = 'rag-audit' | 'whatsapp-agent' | 'voice-sim' | 'megan' | 'vr-street'
+
 type Project = {
   sysId: string
+  stats: string
+  eyebrow: string
   title: string
-  role: string
-  period: string
-  impact: string
   description: string
+  impactLabel: string
+  impact: string
   tags: string[]
+  diagram: DiagramType
+  accent: string
+  border: string
+  wide?: boolean
 }
 
 const projects: Project[] = [
   {
     sysId: 'RAG-AUDIT-2026',
-    title: 'Telecommunications Audit & CV RAG',
-    role: 'Field Auditor | AI Assistant',
-    period: '2026',
-    impact: 'SCALE: 2K → 27K/MO',
+    stats: 'SCALE: 2K → 27K/MO',
+    eyebrow: '● TELECOMMUNICATIONS AUDIT & CV',
+    title: 'RAG Field Auditor | AI Assistant (2026)',
     description:
-      'Auditing field technician "actas" and validation documents. Built an ingestion pipeline parsing JSON telemetry (Jitter, RSSI, optical power), cross-referencing corporate policy in an isolated vector RAG system with image and geolocation Computer Vision verification. Scaled system capacity from 2,000 to 27,000 monthly queries; prevented widespread fraud and automated escalation pathways.',
-    tags: ['RAG', 'Mobile App', 'Computer Vision', 'Geolocation', 'Telemetry', 'Audit'],
+      "Challenge & Architecture: Auditing field technician 'actas' and validation documents. Built an ingestion pipeline parsing JSON telemetry (Jitter, RSSI, optical power levels), cross-referencing corporate operational policy in an isolated vector RAG system with image and geolocation Computer Vision verification.",
+    impactLabel: 'Quantified Impact:',
+    impact:
+      'Scaled system capacity from 2,000 to 27,000 monthly queries; prevented widespread fraud and automated escalation pathways.',
+    tags: ['RAG', 'Mobile App', 'Computer Vision', 'Geolocation', 'Telemetry Audit'],
+    diagram: 'rag-audit',
+    accent: '#00fbfb',
+    border: 'rgba(0,251,251,0.3)',
   },
   {
     sysId: 'XVIEW-WA-AGENT',
-    title: 'WhatsApp TV Support AI Agent',
-    role: 'XVIEW+ AI Assistant',
-    period: '2025 - 2026',
-    impact: 'USERS: 125,000/MO',
+    stats: 'USERS: 125,000/MO',
+    eyebrow: '● CONVERSATIONAL AI & TELCO SUPPORT',
+    title: 'WhatsApp TV Support AI Agent (XVIEW+) (2025 - 2026)',
     description:
-      'Production conversational solution mapped across 29 customer intents in 1.5 months. Integrated AWS Generative Language Models with WhatsApp Business API, Huawei partnership frameworks, and rigorous LLM-as-a-Judge evaluations. Achieved 60-65% auto-resolution rate, containing 75,000+ inquiries monthly with seamless click-to-call human fallback.',
-    tags: ['NLP', 'AWS Bedrock', 'WhatsApp API', 'Huawei', 'LLM-as-a-Judge'],
+      'Challenge & Architecture: Production conversational solution mapped across 29 customer intents in 1.5 months. Integrated AWS Generative Language Models with WhatsApp Business API, Huawei partnership frameworks, and rigorous LLM-as-a-Judge evaluations.',
+    impactLabel: 'Quantified Impact:',
+    impact:
+      '125,000 monthly users; achieved 60–65% auto-resolution rate, containing 75,000+ inquiries monthly with seamless click-to-call human fallback.',
+    tags: ['NLP', 'AWS Bedrock/LLMs', 'WhatsApp API', 'Huawei Tech', 'LLM-as-a-Judge'],
+    diagram: 'whatsapp-agent',
+    accent: '#ffabf3',
+    border: 'rgba(255,171,243,0.4)',
   },
   {
     sysId: 'VOICE-SIM-2026',
-    title: 'AI Call-Center Voice Training Simulator',
-    role: 'Real-Time Voice Simulation & MLOps',
-    period: '2026',
-    impact: 'RETENTION: +50/MO',
+    stats: 'RETENTION: +50/MO',
+    eyebrow: '● REAL-TIME VOICE SIMULATION & MLOPS',
+    title: 'AI Call-Center Voice Training Simulator (2026)',
     description:
-      'Engineered an AWS serverless architecture (Bedrock, S3, DuckDB, DeepDub, API Gateway WebSocket) with dynamic prompt generation across diverse customer personas and fatal-error policy detection. Reduced operational staff turnover by 50 agents per month; cut training time from 4 weeks to 8 days with live scoring.',
+      'Challenge & Architecture: High call-center turnover and long onboarding cycles. Engineered an AWS serverless architecture (Bedrock, S3, DuckDB, DeepDub, API Gateway WebSocket) with dynamic prompt generation across diverse customer personas and fatal-error policy detection.',
+    impactLabel: 'Quantified Impact:',
+    impact:
+      'Reduced operational staff turnover by 50 agents per month; cut training time from 4 weeks to 8 days with live scoring.',
     tags: ['AWS Bedrock', 'WebSocket', 'DuckDB', 'DeepDub', 'Serverless'],
+    diagram: 'voice-sim',
+    accent: '#2ae500',
+    border: 'rgba(42,229,0,0.4)',
   },
   {
     sysId: 'MEGAN-ENT-2026',
-    title: "Megan - Enterprise AI Assistant",
-    role: 'Internal Copilot & Corporate Intelligence',
-    period: '2026 - Active',
-    impact: 'CORE::ENTERPRISE_RAG',
+    stats: 'CORE::ENTERPRISE_RAG',
+    eyebrow: '● INTERNAL COPILOT & CORPORATE INTELLIGENCE',
+    title: "'Megan' Enterprise AI Assistant (2026 - Active)",
     description:
-      'Product Management of an internal generative copilot combining proprietary RAG architectures with distributed local LLMs (Ollama / vLLM) for ultra-secure, air-gapped corporate document search, HR automation, and strategic synthesis. Empowering executive and operational tiers with sub-second verified knowledge retrieval under stringent data sovereignty.',
+      'Challenge & Architecture: Enterprise Product Management of internal generative copilot. Combines proprietary RAG architectures with distributed local LLMs (Ollama / vLLM) for ultra-secure, air-gapped corporate document search, HR automation, and strategic synthesis.',
+    impactLabel: 'Strategic Impact:',
+    impact:
+      'Empowered executive and operational tiers with sub-second verified knowledge retrieval under stringent corporate data sovereignty.',
     tags: ['Enterprise PM', 'RAG Architecture', 'Local LLMs', 'Data Sovereignty'],
+    diagram: 'megan',
+    accent: '#00fbfb',
+    border: 'rgba(0,251,251,0.3)',
   },
   {
     sysId: 'CICESE-VR-STREET',
-    title: 'VR Therapeutic Street Simulator',
-    role: 'Unity Developer & Scrum Master',
-    period: '2024 - 2025',
-    impact: 'CLINICAL: 35+ CHILDREN',
+    stats: 'CLINICAL: 35+ AUTISTIC CHILDREN',
+    eyebrow: '● VR THERAPEUTIC ENVIRONMENT & SPATIAL COMPUTING',
+    title: 'Street Simulator | VR Therapeutic Environment (2024 - 2025)',
     description:
-      'Led Agile/Scrum development to create an immersive, low-anxiety VR simulation for autistic children to master street crossing and sensory management. Architected Unity C# physics with real-time geospatial telemetry and biometric analytics backends. Benefited 35+ children in clinical trials with measurable improvement in cognitive hazard identification.',
-    tags: ['Scrum Master', 'Unity', 'VR', 'C#', 'PostgreSQL', 'Azure', 'Biometrics'],
+      'Challenge & Architecture: Led Agile/Scrum development as Scrum Master and Software Engineer to create an immersive, low-anxiety VR simulation for autistic children to master street crossing and sensory management. Architected Unity C# physics with real-time geospatial telemetry tracking and Azure/PostgreSQL backend analytics.',
+    impactLabel: 'Quantified Clinical Impact:',
+    impact:
+      'Benefited 35+ children in clinical trials; verified measurable improvement in cognitive hazard identification and autonomic composure.',
+    tags: ['Scrum Master', 'Unity VR', 'C#', 'PostgreSQL', 'Azure Cloud', 'Biometric Analytics'],
+    diagram: 'vr-street',
+    accent: '#ffabf3',
+    border: 'rgba(255,171,243,0.4)',
+    wide: true,
   },
 ]
 
@@ -65,63 +100,96 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="container-cyber scroll-mt-24 py-16 md:py-24"
+      className="w-full scroll-mt-24 border-b border-surface-light px-4 py-16 lg:px-8 lg:py-24"
     >
-      <div className="mb-10 flex items-end justify-between">
-        <div>
-          <p className="tech-badge mb-3 inline-block">// 01_FEATURED_PRODUCTION_PROJECTS</p>
-          <h2 className="font-display text-3xl font-bold uppercase tracking-tight text-cyber-text md:text-4xl">
-            Neural <span className="text-cyber-magenta">Systems</span>
-          </h2>
-          <p className="mt-2 font-body text-xs text-cyber-textSecondary">
-            SCOPE: 5 PRODUCTION GRADE DEPLOYMENTS
-          </p>
+      <div className="container-cyber flex flex-col gap-10">
+        <div className="flex flex-col items-start justify-between gap-2 md:flex-row md:items-end">
+          <div className="flex flex-col gap-1">
+            <div className="flex items-center gap-2 font-code text-[12px] font-medium uppercase tracking-widest text-primary-fixed">
+              <span className="h-2 w-2 bg-primary-fixed" />
+              <span>// 01_FEATURED_PRODUCTION_PROJECTS</span>
+            </div>
+            <h2 className="font-headline-lg uppercase tracking-tight text-primary">
+              Engineered AI Architectures &amp; Systems
+            </h2>
+          </div>
+          <div className="flex items-center gap-2 border border-surface-light bg-surface-container px-3 py-1 font-code text-[10px] font-bold text-outline">
+            <span className="inline-block h-2 w-2 animate-ping rounded-full bg-tertiary-fixed-dim" />
+            <span>PORTFOLIO SCOPE: 5 PRODUCTION GRADE DEPLOYMENTS</span>
+          </div>
         </div>
-        <p className="hidden font-body text-xs text-cyber-textSecondary md:block">
-          [ SELECTED_WORK ]
-        </p>
-      </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
-          <article key={project.sysId} className="card-cyber flex flex-col">
-            <div className="mb-4 flex items-center justify-between border-b border-cyber-cyan/20 pb-3">
-              <h3 className="font-display text-base font-bold leading-snug text-cyber-cyan">
-                {project.title}
-              </h3>
-              <span className="shrink-0 pl-2 font-body text-[0.6rem] text-cyber-textSecondary">
-                [SYS_ID: {project.sysId}]
-              </span>
-            </div>
-
-            <p className="mb-1 font-body text-xs font-bold uppercase tracking-wider text-cyber-magenta">
-              {project.role} ({project.period})
-            </p>
-
-            <p className="mb-3 font-body text-[0.65rem] text-cyber-green">
-              &gt; IMPACT: {project.impact}
-            </p>
-
-            <p className="mb-5 flex-1 font-body text-sm leading-relaxed text-cyber-textSecondary">
-              {project.description}
-            </p>
-
-            <div className="mb-5 flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span key={tag} className="tech-badge">
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <a
-              href="#contact"
-              className="font-display text-xs font-bold uppercase tracking-[0.12em] text-cyber-magenta transition-all duration-300 hover:pl-2 hover:text-cyber-cyan hover:[text-shadow:0_0_20px_rgba(0,255,255,0.4)]"
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <article
+              key={project.sysId}
+              className={`group relative flex flex-col justify-between bg-surface p-6 transition-all duration-300 hover:bg-surface-container ${
+                project.wide ? 'md:col-span-2' : ''
+              }`}
+              style={{
+                border: `1px solid ${project.border}`,
+              }}
             >
-              Learn More&nbsp;&rsaquo;&rsaquo;
-            </a>
-          </article>
-        ))}
+              <div>
+                <div className="mb-2 flex items-center justify-between bg-surface-container-low px-3 py-1">
+                  <span
+                    className="font-code text-[10px] font-bold"
+                    style={{ color: project.accent }}
+                  >
+                    [SYS_ID: {project.sysId}]
+                  </span>
+                  <span className="font-code text-[10px] font-bold text-tertiary-fixed-dim">
+                    {project.stats}
+                  </span>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <span
+                    className="inline-block w-max bg-surface-container-low px-2 py-0.5 font-code text-[10px] font-bold uppercase tracking-wider"
+                    style={{ color: project.accent }}
+                  >
+                    {project.eyebrow}
+                  </span>
+                  <h3 className="font-headline-sm uppercase transition-colors group-hover:text-primary-fixed">
+                    {project.title}
+                  </h3>
+
+                  <ProjectSchematic type={project.diagram} />
+
+                  <p className="font-body-sm leading-relaxed text-on-surface-variant">
+                    {project.description}
+                  </p>
+                  <div
+                    className="border-l-2 bg-surface-container-low p-2"
+                    style={{ borderLeftColor: project.accent }}
+                  >
+                    <span
+                      className="font-code text-[10px] font-bold uppercase"
+                      style={{ color: project.accent }}
+                    >
+                      {project.impactLabel}
+                    </span>
+                    <p className="font-body-sm text-on-surface">{project.impact}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <div className="flex flex-wrap gap-1">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-1.5 py-0.5 font-code text-[10px] font-bold"
+                      style={{ color: project.accent, backgroundColor: '#1c1b1b' }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )
