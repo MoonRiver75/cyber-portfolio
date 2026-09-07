@@ -1,7 +1,7 @@
 const socials = [
-  { label: 'GitHub', href: 'https://github.com' },
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
-  { label: 'Twitter/X', href: 'https://x.com' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com' },
+  { label: 'GitHub', href: 'https://github.com/MoonRiver75' },
+  { label: 'Email', href: 'mailto:roldanmadero16@outlook.com' },
 ]
 
 const stack = [
@@ -9,26 +9,29 @@ const stack = [
   'Python',
   'Docker',
   'Kubernetes',
-  'TensorFlow',
-  'CUDA',
-  'LangChain',
-  'AWS',
-  'Ray',
+  'AWS Bedrock',
+  'RAG',
+  'FastAPI',
+  'Unity',
+  'Ollama',
+  'SQL',
 ]
 
 export default function Footer() {
   return (
     <footer id="contact" className="border-t border-cyber-cyan/20 py-12">
       <div className="container-cyber">
-        <div className="mb-10 flex flex-col items-center justify-between gap-6 md:flex-row">
+        <div className="mb-10 flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
           <div>
             <p className="font-display text-lg font-black tracking-[0.12em] text-cyber-text">
               <span className="text-cyber-cyan">&lt;</span>
-              AI<span className="text-cyber-magenta">_</span>Engineer
+              JESUS{' '}
+              <span className="text-cyber-magenta">ROLDAN</span>
               <span className="text-cyber-green">/&gt;</span>
             </p>
             <p className="mt-2 font-body text-xs text-cyber-textSecondary">
-              Building systems that learn. Located in the cloud.
+              [UPLINK_READY // TRANSMISSION_TERMINAL] — Available for AI
+              project leadership & enterprise generative transformations.
             </p>
           </div>
 
@@ -37,7 +40,7 @@ export default function Footer() {
               <li key={social.label}>
                 <a
                   href={social.href}
-                  target="_blank"
+                  target={social.href.startsWith('mailto') ? undefined : '_blank'}
                   rel="noreferrer"
                   className="nav-link"
                 >
@@ -48,7 +51,32 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="mb-8 flex flex-wrap items-center justify-center gap-2 md:justify-start">
+        <div className="grid gap-4 border-t border-cyber-cyan/10 pt-6 font-body text-xs text-cyber-textSecondary md:grid-cols-3">
+          <div>
+            <span className="text-cyber-magenta">&gt; EMAIL:</span>{' '}
+            <a
+              href="mailto:roldanmadero16@outlook.com"
+              className="transition-colors hover:text-cyber-cyan"
+            >
+              roldanmadero16@outlook.com
+            </a>
+          </div>
+          <div>
+            <span className="text-cyber-magenta">&gt; PHONE:</span>{' '}
+            <a
+              href="tel:+523113738261"
+              className="transition-colors hover:text-cyber-cyan"
+            >
+              (+52) 311 373 8261
+            </a>
+          </div>
+          <div>
+            <span className="text-cyber-magenta">&gt; BASE_LOC:</span>{' '}
+            Guadalajara, Jalisco, Mexico
+          </div>
+        </div>
+
+        <div className="mb-8 mt-8 flex flex-wrap items-center justify-center gap-2 md:justify-start">
           {stack.map((tech) => (
             <span key={tech} className="tech-badge">
               {tech}
@@ -57,9 +85,12 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-3 border-t border-cyber-cyan/10 pt-6 font-body text-xs text-cyber-textSecondary md:flex-row">
-          <p>&copy; 2026 AI Engineer. All rights reserved.</p>
+          <p>
+            &copy; 2026 Jes&uacute;s Rold&aacute;n Madero Aguilar. All neural
+            architectures deployed.
+          </p>
           <p className="text-cyber-green">
-            [STATUS: AVAILABLE_FOR_WORK]
+            [SYS_STATUS: ONLINE // ALL INTEL CIRCUITS OPERATIONAL]
           </p>
         </div>
       </div>

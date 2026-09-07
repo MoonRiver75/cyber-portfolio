@@ -1,6 +1,7 @@
 const navLinks = [
   { label: 'Projects', href: '#projects' },
-  { label: 'Resume', href: '#resume' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -10,11 +11,10 @@ export default function Navbar() {
       <nav className="container-cyber flex items-center justify-between">
         <a
           href="#"
-          className="font-display text-lg font-black tracking-[0.12em] text-cyber-text transition-all duration-300 hover:text-cyber-cyan hover:[text-shadow:0_0_20px_rgba(0,255,255,0.4)]"
+          className="flex items-center gap-3 font-display text-sm font-bold tracking-[0.12em] text-cyber-text transition-all duration-300 hover:text-cyber-cyan hover:[text-shadow:0_0_20px_rgba(0,255,255,0.4)]"
         >
-          <span className="text-cyber-cyan">&lt;</span>
-          AI<span className="text-cyber-magenta">_</span>Engineer
-          <span className="text-cyber-green">/&gt;</span>
+          <img src="/logo.svg" alt="Jesús Roldán Madero" className="h-8 w-auto" />
+          JESUS ROLDAN
         </a>
 
         <ul className="flex items-center gap-8">
