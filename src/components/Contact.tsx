@@ -10,8 +10,8 @@ export default function Contact() {
       className="w-full scroll-mt-24 bg-surface-container-lowest px-4 py-16 lg:px-8 lg:py-24"
     >
       <div
-        className="container-cyber relative overflow-hidden border bg-surface p-8 shadow-[0_0_40px_rgba(0,251,251,0.15)] lg:p-12"
-        style={{ borderColor: 'rgba(0,251,251,0.4)' }}
+        className="container-cyber relative overflow-hidden border bg-surface p-8 shadow-[0_0_40px_rgba(0,255,255,0.15)] lg:p-12"
+        style={{ borderColor: 'rgba(0,255,255,0.4)' }}
       >
         <div
           className="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-secondary-container/10 blur-[100px]"
@@ -52,7 +52,7 @@ export default function Contact() {
           <div className="flex min-w-[280px] flex-col gap-2">
             <a
               href="mailto:roldanmadero16@outlook.com"
-              className="group inline-flex items-center justify-center gap-2 bg-primary-container px-6 py-4 font-code text-[12px] font-medium uppercase tracking-wider text-on-primary-container shadow-[0_0_20px_rgba(0,251,251,0.5)] transition-all hover:shadow-[3px_3px_0px_#fe00fe,0_0_30px_rgba(0,251,251,0.9)]"
+              className="group inline-flex items-center justify-center gap-2 bg-primary-container px-6 py-4 font-code text-[12px] font-medium uppercase tracking-wider text-on-primary-container shadow-[0_0_20px_rgba(0,255,255,0.5)] transition-all hover:shadow-[3px_3px_0px_#ff00ff,0_0_30px_rgba(0,255,255,0.9)]"
             >
               <span className="material-symbols-outlined text-[20px]">send</span>
               <span>{contact.btnTransmit}</span>
@@ -61,7 +61,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/roldanmadero/?locale=es"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 border border-secondary/40 bg-surface-container-low px-6 py-3 font-code text-[12px] font-medium uppercase tracking-wider text-secondary shadow-[0_0_15px_rgba(254,0,254,0.3)] transition-all hover:bg-secondary-container hover:text-text-inverse"
+              className="group inline-flex items-center justify-center gap-2 border border-secondary/40 bg-surface-container-low px-6 py-3 font-code text-[12px] font-medium uppercase tracking-wider text-secondary shadow-[0_0_15px_rgba(255,0,255,0.3)] transition-all hover:bg-secondary-container hover:text-text-inverse"
             >
               <span className="material-symbols-outlined text-[18px]">hub</span>
               <span>{contact.btnLinkedIn}</span>

@@ -5,15 +5,17 @@ function GlitchLine({
   className = '',
   primary,
   secondary,
+  neon = false,
 }: {
   text: string
   className?: string
   primary: string
   secondary: string
+  neon?: boolean
 }) {
   return (
     <span className={`relative inline-block ${className}`}>
-      <span className="relative z-10">{text}</span>
+      <span className={`relative z-10 ${neon ? 'text-neon' : ''}`}>{text}</span>
       <span
         className="glitch-layer absolute -top-[1px] -left-[2px] opacity-70"
         style={{ color: primary }}
@@ -38,11 +40,11 @@ export default function Hero() {
     <section className="relative w-full overflow-hidden border-b border-surface-light py-12 lg:py-20">
       <div className="dots-grid absolute inset-0 opacity-40" aria-hidden="true" />
       <div
-        className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary-fixed/5 blur-[120px]"
+        className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary-fixed/10 blur-[120px]"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-secondary-container/10 blur-[120px]"
+        className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-secondary-container/15 blur-[120px]"
         aria-hidden="true"
       />
 
@@ -67,19 +69,25 @@ export default function Hero() {
             <span>{hero.identity}</span>
           </div>
 
-          <h1 className="font-display-xl uppercase tracking-tight text-primary [text-shadow:0_0_18px_rgba(0,251,251,0.25)]">
-            <GlitchLine text={hero.headline1} primary="#00fbfb" secondary="#fe00fe" />
+          <h1 className="font-display-xl uppercase tracking-tight text-primary [text-shadow:0_0_24px_rgba(0,255,255,0.5)]">
+            <GlitchLine
+              className="text-glow-cyan"
+              text={hero.headline1}
+              primary="#00ffff"
+              secondary="#ff00ff"
+            />
             <br />
             <GlitchLine
-              className="text-primary-fixed [text-shadow:0_0_24px_rgba(0,251,251,0.6)]"
+              className="[filter:drop-shadow(0_0_18px_rgba(255,0,255,0.55))]"
+              neon
               text={hero.headline2}
-              primary="#ffffff"
-              secondary="#ffabf3"
+              primary="#00ffff"
+              secondary="#ff8ff7"
             />
           </h1>
 
           <div className="flex flex-col gap-1">
-            <div className="font-headline-sm uppercase tracking-wide text-tertiary-fixed-dim">
+            <div className="font-headline-sm uppercase tracking-wide text-tertiary-fixed-dim [text-shadow:0_0_18px_rgba(57,255,20,0.45)]">
               {hero.roleLine}
             </div>
             <p className="max-w-4xl font-body-lg leading-relaxed text-on-surface-variant">
@@ -125,7 +133,7 @@ export default function Hero() {
         <div className="flex flex-wrap items-center gap-4 pt-1">
           <a
             href="#projects"
-            className="group inline-flex items-center justify-center bg-primary-container px-6 py-3 font-code text-[12px] font-medium uppercase tracking-wider text-on-primary-container shadow-[0_0_20px_rgba(0,251,251,0.5)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_#fe00fe,0_0_25px_rgba(0,251,251,0.8)]"
+            className="group inline-flex items-center justify-center bg-primary-container px-6 py-3 font-code text-[12px] font-medium uppercase tracking-wider text-on-primary-container shadow-[0_0_24px_rgba(0,255,255,0.8)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_#ff00ff,0_0_30px_rgba(0,255,255,0.95)]"
           >
             <span className="relative z-10 flex items-center gap-2">
               <span>[ {hero.ctaView}</span>
@@ -137,7 +145,7 @@ export default function Hero() {
           </a>
           <a
             href="#experience"
-            className="group inline-flex items-center justify-center border border-secondary/30 bg-surface-container-low px-6 py-3 font-code text-[12px] font-medium uppercase tracking-wider text-secondary transition-all duration-200 hover:bg-secondary-container hover:text-text-inverse hover:shadow-[0_0_20px_rgba(254,0,254,0.6)]"
+            className="group inline-flex items-center justify-center border border-secondary/30 bg-surface-container-low px-6 py-3 font-code text-[12px] font-medium uppercase tracking-wider text-secondary transition-all duration-200 hover:bg-secondary-container hover:text-text-inverse hover:shadow-[0_0_24px_rgba(255,0,255,0.8)]"
           >
             <span className="flex items-center gap-2">
               <span>&gt;_</span>

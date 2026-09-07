@@ -28,7 +28,7 @@ function buildContent(lang: Lang): CvContent {
   if (lang === 'es') {
     return {
       name: 'JESÚS ROLDÁN MADERO AGUILAR',
-      role: 'Gerente de Proyectos de IA | Ingeniero de Implementación IA | Ingeniero de Software',
+      role: 'AI Project Manager | AI Implementation Engineer | Software Engineer',
       contacts: [
         'Guadalajara, Jalisco, México | Tel: (+52) 311 373 8261',
         'roldanmadero16@outlook.com | linkedin.com/in/roldanmadero | github.com/MoonRiver75',
@@ -40,7 +40,7 @@ function buildContent(lang: Lang): CvContent {
             {
               flush: true,
               bullets: [
-                'Gerente de Proyectos de IA e Ingeniero de Software con experiencia práctica liderando transformación empresarial de IA, gestión de producto e implementación full-stack a escala. Actualmente responsable del ciclo de vida completo de iniciativas de IA que atienden a más de 150,000 usuarios combinados al mes entre el soporte al cliente y las operaciones de campo de Megacable, desde requisitos de negocio y evaluación de proveedores hasta la ejecución ágil con desarrollo asistido por IA (Vibecoding) y coordinación transversal con el Chief AI Officer. Base técnica sólida en lenguajes de programación, arquitecturas cloud (AWS, Azure, GCP) y diseño de sistemas RAG/LLM. Capaz de unir la estrategia de IA, la gobernanza corporativa y la ingeniería práctica para desplegar flujos de trabajo inteligentes seguros, medibles y altamente adoptados.',
+                'AI Project Manager and Software Engineer con experiencia práctica liderando transformación empresarial de IA, gestión de producto e implementación full-stack a escala. Actualmente responsable del ciclo de vida completo de iniciativas de IA que atienden a más de 150,000 usuarios combinados al mes entre el soporte al cliente y las operaciones de campo de Megacable, desde requisitos de negocio y evaluación de proveedores hasta la ejecución ágil con desarrollo asistido por IA (Vibecoding) y coordinación transversal con el Chief AI Officer. Base técnica sólida en lenguajes de programación, arquitecturas cloud (AWS, Azure, GCP) y diseño de sistemas RAG/LLM. Capaz de unir la estrategia de IA, la gobernanza corporativa y la ingeniería práctica para desplegar flujos de trabajo inteligentes seguros, medibles y altamente adoptados.',
               ],
             },
           ],
@@ -84,7 +84,7 @@ function buildContent(lang: Lang): CvContent {
               ],
             },
             {
-              title: 'Diseñador de Videojuegos e Ingeniero de Software',
+              title: 'Video Game Designer & Software Engineer',
               sub: 'CICESE UAT — Nayarit, México',
               period: '2024 – 2025',
               bullets: [
@@ -152,7 +152,7 @@ function buildContent(lang: Lang): CvContent {
           title: 'LIDERAZGO',
           entries: [
             {
-              title: 'Asesor de Tecnología Estatal',
+              title: 'State Technology Advisor',
               period: 'Junio 2024 – Actual',
               bullets: [
                 'Coordiné iniciativas tecnológicas y propuestas de innovación que impactan a más de 100,000 jóvenes en el estado de Nayarit, asegurando un presupuesto acumulado de más de $100,000 MXN.',

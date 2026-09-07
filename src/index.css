@@ -29,26 +29,26 @@
   --color-background: #131313;
   --color-on-background: #e5e2e1;
   --color-primary: #ffffff;
-  --color-primary-container: #00fbfb;
-  --color-on-primary-container: #007070;
-  --color-primary-fixed: #00fbfb;
-  --color-primary-fixed-dim: #00dddd;
+  --color-primary-container: #00ffff;
+  --color-on-primary-container: #003333;
+  --color-primary-fixed: #00ffff;
+  --color-primary-fixed-dim: #00e5ff;
   --color-on-primary-fixed: #002020;
   --color-on-primary-fixed-variant: #004f4f;
-  --color-secondary: #ffabf3;
-  --color-secondary-container: #fe00fe;
-  --color-on-secondary: #5b005b;
+  --color-secondary: #ff8ff7;
+  --color-secondary-container: #ff00ff;
+  --color-on-secondary: #3d003d;
   --color-on-secondary-container: #500050;
-  --color-secondary-fixed: #ffd7f5;
-  --color-secondary-fixed-dim: #ffabf3;
+  --color-secondary-fixed: #ffb7f2;
+  --color-secondary-fixed-dim: #ff8ff7;
   --color-on-secondary-fixed: #380038;
   --color-on-secondary-fixed-variant: #810081;
   --color-tertiary: #ffffff;
-  --color-tertiary-container: #79ff5b;
-  --color-on-tertiary: #053900;
-  --color-on-tertiary-container: #117500;
-  --color-tertiary-fixed: #79ff5b;
-  --color-tertiary-fixed-dim: #2ae500;
+  --color-tertiary-container: #39ff14;
+  --color-on-tertiary: #033800;
+  --color-on-tertiary-container: #007100;
+  --color-tertiary-fixed: #39ff14;
+  --color-tertiary-fixed-dim: #33ee06;
   --color-on-tertiary-fixed: #022100;
   --color-on-tertiary-fixed-variant: #095300;
   --color-error: #ffb4ab;
@@ -67,12 +67,12 @@
 
   /* ===== Shadows ===== */
   --shadow-neon-cyan:
-    0 0 20px rgba(0, 255, 255, 0.3),
-    0 0 60px rgba(0, 255, 255, 0.1);
+    0 0 24px rgba(0, 255, 255, 0.55),
+    0 0 70px rgba(0, 255, 255, 0.25);
   --shadow-neon-magenta:
-    0 0 20px rgba(255, 0, 255, 0.3),
-    0 0 60px rgba(255, 0, 255, 0.1);
-  --shadow-neon-green: 0 0 20px rgba(57, 255, 20, 0.2);
+    0 0 24px rgba(255, 0, 255, 0.55),
+    0 0 70px rgba(255, 0, 255, 0.25);
+  --shadow-neon-green: 0 0 24px rgba(57, 255, 20, 0.4);
   --shadow-card-cyber: 0 4px 30px rgba(0, 0, 0, 0.5);
 
   /* ===== Animations ===== */
@@ -345,6 +345,32 @@
 .dots-grid-dense {
   background-image: radial-gradient(#1c1b1b 1px, transparent 1px);
   background-size: 12px 12px;
+}
+
+/* ===== Neon text utilities ===== */
+.text-neon {
+  background: linear-gradient(92deg, #00ffff 0%, #ff00ff 50%, #39ff14 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-glow-cyan {
+  text-shadow:
+    0 0 24px rgba(0, 255, 255, 0.85),
+    0 0 70px rgba(0, 255, 255, 0.35);
+}
+
+.text-glow-magenta {
+  text-shadow:
+    0 0 24px rgba(255, 0, 255, 0.85),
+    0 0 70px rgba(255, 0, 255, 0.35);
+}
+
+.text-glow-green {
+  text-shadow:
+    0 0 24px rgba(57, 255, 20, 0.75),
+    0 0 70px rgba(57, 255, 20, 0.3);
 }
 
 /* ===== Scanline horizontal screen effect ===== */

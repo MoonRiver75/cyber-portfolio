@@ -28,7 +28,7 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-3 py-1 font-code text-[12px] font-medium uppercase tracking-wider bg-cyber-cyan text-cyber-bg shadow-[0_0_12px_rgba(0,251,251,0.4)] transition-all hover:brightness-110"
+                  className="px-3 py-1 font-code text-[12px] font-medium uppercase tracking-wider bg-cyber-cyan text-cyber-bg shadow-[0_0_12px_rgba(0,255,255,0.4)] transition-all hover:brightness-110"
                 >
                   {link.label}
                 </a>
@@ -60,7 +60,7 @@ export default function Navbar() {
                     aria-pressed={active}
                     className={`px-2.5 py-1 font-code text-[11px] font-bold uppercase tracking-wider transition-colors ${
                       active
-                        ? 'bg-cyber-cyan text-cyber-bg shadow-[0_0_10px_rgba(0,251,251,0.5)]'
+                        ? 'bg-cyber-cyan text-cyber-bg shadow-[0_0_10px_rgba(0,255,255,0.5)]'
                         : 'text-[#b9cac9] hover:bg-cyber-surfaceLight hover:text-primary'
                     }`}
                   >

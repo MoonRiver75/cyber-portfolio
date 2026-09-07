@@ -11,7 +11,7 @@ type Node = {
   pulseSpeed: number
 }
 
-const COLORS = ['rgba(0,251,251,', 'rgba(254,0,254,', 'rgba(42,229,0,']
+const COLORS = ['rgba(0,255,255,', 'rgba(255,0,255,', 'rgba(57,255,20,']
 
 function buildNodes(width: number, height: number, count: number): Node[] {
   const nodes: Node[] = []

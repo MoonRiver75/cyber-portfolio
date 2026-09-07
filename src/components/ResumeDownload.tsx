@@ -40,7 +40,7 @@ export default function ResumeDownload() {
         </div>
 
         <div className="flex flex-col items-start justify-between gap-8 border bg-surface p-8 lg:flex-row lg:items-center lg:p-10"
-          style={{ borderColor: 'rgba(0,251,251,0.3)' }}
+          style={{ borderColor: 'rgba(0,255,255,0.3)' }}
         >
           <div className="flex max-w-2xl flex-col gap-3">
             <p className="font-body-md leading-relaxed text-on-surface-variant">{cv.description}</p>
@@ -67,7 +67,7 @@ export default function ResumeDownload() {
               type="button"
               onClick={handleDownload}
               disabled={busy}
-              className="group inline-flex items-center justify-center gap-2 bg-primary-container px-6 py-4 font-code text-[12px] font-medium uppercase tracking-wider text-on-primary-container shadow-[0_0_20px_rgba(0,251,251,0.5)] transition-all hover:shadow-[3px_3px_0px_#fe00fe,0_0_30px_rgba(0,251,251,0.9)] disabled:cursor-not-allowed disabled:opacity-60"
+              className="group inline-flex items-center justify-center gap-2 bg-primary-container px-6 py-4 font-code text-[12px] font-medium uppercase tracking-wider text-on-primary-container shadow-[0_0_20px_rgba(0,255,255,0.5)] transition-all hover:shadow-[3px_3px_0px_#ff00ff,0_0_30px_rgba(0,255,255,0.9)] disabled:cursor-not-allowed disabled:opacity-60"
             >
               <span className="material-symbols-outlined text-[20px]">{busy ? 'hourglass_top' : 'download'}</span>
               <span>{busy ? '...' : cv.btnLabel}</span>

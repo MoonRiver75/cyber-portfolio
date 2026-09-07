@@ -37,7 +37,7 @@ export default function Experience() {
                     {role.badge && (
                       <span
                         className="ml-2 border bg-surface-container-low px-1.5 py-0.5 font-code text-[10px] font-bold text-primary-fixed"
-                        style={{ borderColor: 'rgba(0,251,251,0.3)' }}
+                        style={{ borderColor: 'rgba(0,255,255,0.3)' }}
                       >
                         {role.badge}
                       </span>
@@ -86,7 +86,7 @@ export default function Experience() {
           {/* Education callout */}
           <div
             className="flex flex-col items-start justify-between gap-4 border bg-surface-container-low p-6 md:flex-row md:items-center"
-            style={{ borderColor: 'rgba(0,251,251,0.3)' }}
+            style={{ borderColor: 'rgba(0,255,255,0.3)' }}
           >
             <div className="flex flex-col gap-1">
               <span className="font-code text-[10px] font-bold uppercase tracking-widest text-primary-fixed">
