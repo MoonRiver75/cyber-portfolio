@@ -1,5 +1,5 @@
 const socials = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/roldanmadero/?locale=es' },
   { label: 'GitHub', href: 'https://github.com/MoonRiver75' },
   { label: 'Email', href: 'mailto:roldanmadero16@outlook.com' },
 ]
