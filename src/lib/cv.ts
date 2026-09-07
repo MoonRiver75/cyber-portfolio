@@ -2,10 +2,12 @@ import type { jsPDF } from 'jspdf'
 import type { Lang } from '../i18n/translations'
 
 type CvEntry = {
-  title: string
-  sub?: string
+  title?: string
+  tagsLine?: string
   period?: string
-  bullets: string[]
+  sub?: string
+  flush?: boolean
+  bullets?: string[]
 }
 
 type CvSection = {
@@ -26,80 +28,147 @@ function buildContent(lang: Lang): CvContent {
   if (lang === 'es') {
     return {
       name: 'JESÚS ROLDÁN MADERO AGUILAR',
-      role: 'Gerente de Proyectos de IA  |  Ingeniero de Implementación  |  Ingeniero de Software',
+      role: 'Gerente de Proyectos de IA | Ingeniero de Implementación IA | Ingeniero de Software',
       contacts: [
-        'Guadalajara, Jalisco, México',
-        '(+52) 311 373 8261',
-        'roldanmadero16@outlook.com',
-        'linkedin.com/in/roldanmadero',
-        'github.com/MoonRiver75',
+        'Guadalajara, Jalisco, México | Tel: (+52) 311 373 8261',
+        'roldanmadero16@outlook.com | linkedin.com/in/roldanmadero | github.com/MoonRiver75',
       ],
       sections: [
+        {
+          title: 'PERFIL PROFESIONAL',
+          entries: [
+            {
+              flush: true,
+              bullets: [
+                'Gerente de Proyectos de IA e Ingeniero de Software con experiencia práctica liderando transformación empresarial de IA, gestión de producto e implementación full-stack a escala. Actualmente responsable del ciclo de vida completo de iniciativas de IA que atienden a más de 150,000 usuarios combinados al mes entre el soporte al cliente y las operaciones de campo de Megacable, desde requisitos de negocio y evaluación de proveedores hasta la ejecución ágil con desarrollo asistido por IA (Vibecoding) y coordinación transversal con el Chief AI Officer. Base técnica sólida en lenguajes de programación, arquitecturas cloud (AWS, Azure, GCP) y diseño de sistemas RAG/LLM. Capaz de unir la estrategia de IA, la gobernanza corporativa y la ingeniería práctica para desplegar flujos de trabajo inteligentes seguros, medibles y altamente adoptados.',
+              ],
+            },
+          ],
+        },
         {
           title: 'EDUCACIÓN',
           entries: [
             {
-              title: 'B.Sc. Ingeniería en Sistemas Computacionales',
-              sub: 'Universidad Autónoma de Nayarit  —  México',
-              period: '2025',
+              title: 'B.Sc. Ingeniería en Sistemas Computacionales | Ingeniería de Software',
+              sub: 'Universidad Autónoma de Nayarit — Nayarit, México',
+              period: 'Graduación: Diciembre 2024',
               bullets: [
-                'Promedio perfecto GPA 4.0 / 100%  ·  Distinción Golden Key International Honour Society  ·  Mejor capstone departamental.',
+                'Golden Key Honours Scholar | GPA: 4.0',
+                'Cursos Relevantes: Ingeniería de Software, Machine Learning Aplicado, Sistemas Operativos, Arquitectura de Computadoras, Programación Basada en Modelos, Algoritmos y Estructuras de Datos.',
               ],
             },
           ],
         },
         {
-          title: 'EXPERIENCIA',
+          title: 'FORMACIÓN EN IA Y DESARROLLO PROFESIONAL',
+          entries: [
+            { title: 'Advanced AI Project Management — En curso.', bullets: ['Aplicación de herramientas de IA para roadmapping de producto, ejecución, comunicación con stakeholders y control Agile de proyectos.'] },
+            { title: 'AI Governance & Compliance — En curso.', bullets: ['Marcos de gobernanza, consideraciones regulatorias, adopción responsable y prácticas de cumplimiento para iniciativas empresariales de IA.'] },
+            { title: 'Secure Enterprise AI: Risk Management — En curso.', bullets: ['Gestión de riesgo empresarial, protección de datos, controles de cumplimiento, seguridad de prompts y despliegue responsable.'] },
+          ],
+        },
+        {
+          title: 'EXPERIENCIA PROFESIONAL',
           entries: [
             {
-              title: 'Gerente de Proyectos de IA e Ingeniero de Implementación',
-              sub: 'Megacable  —  Guadalajara, Jalisco, México',
+              title: 'AI Project Manager & Implementation Engineer',
+              sub: 'Megacable — Guadalajara, México',
               period: '2025 – Actual',
               bullets: [
-                'Dirijo el portafolio de IA empresarial que sirve a 150,000+ usuarios mensuales en auditoría RAG, agentes conversacionales y simulación de voz.',
-                'Logré 60–65% de resolución automatizada en un agente de WhatsApp con 125K usuarios y escalé un auditor RAG de 2,000 a 27,000 consultas mensuales.',
+                'Lidero el project management de extremo a extremo y la implementación técnica de iniciativas empresariales de IA, reportando al Chief AI Officer y coordinando con equipos multifuncionales y proveedores externos (Huawei, Meta).',
+                'Soy responsable del roadmap de un portafolio de agentes de IA en producción (soporte TV vía WhatsApp, auditor RAG de campo, simulador de voz de call-center, asistente empresarial "Megan") que atiende a más de 150,000 usuarios combinados al mes.',
+                'Realizo evaluaciones de capacidad técnica de sistemas empresariales (incluido Oracle Fusion Cloud HCM releases 26A/26B) y de modelos generativos de lenguaje (GLMs) para determinar costo, latencia, seguridad y alineación estratégica.',
+                'Diseño arquitecturas operativas y diagramas de flujo de procesos con Mermaid.js, PlantUML y Eraser.io para traducir necesidades complejas de negocio en entregables de ingeniería estructurados.',
+                'Impulso el prototipado rápido y la entrega de soluciones con metodologías Vibecoding (Desarrollo Asistido por IA), minimizando deuda técnica y acelerando el time-to-market.',
+                'Lidero la gestión de cambio empresarial para la adopción de Copilot Pro y NotebookLM, generando business cases, flujos de permisos y documentación ejecutiva.',
               ],
             },
             {
-              title: 'Asesor de Tecnología Estatal y Coordinador de Innovación',
-              sub: 'Gobierno de Nayarit  —  Tepic, México',
+              title: 'Diseñador de Videojuegos e Ingeniero de Software',
+              sub: 'CICESE UAT — Nayarit, México',
               period: '2024 – 2025',
               bullets: [
-                'Aseguré $100K+ MXN en becas estatales de innovación y coordiné programas de modernización que impactaron a 100,000+ estudiantes y jóvenes.',
-              ],
-            },
-            {
-              title: 'Diseñador de Videojuegos, Scrum Master e Ingeniero de Software',
-              sub: 'CICESE  -  Unidad de Transferencia Tecnológica (UAT)',
-              period: '2024 – 2025',
-              bullets: [
-                'Scrum Master de un equipo interdisciplinario que construyó un simulador VR de cruce de calles para niños autistas; 35+ niños en ensayos clínicos.',
+                'Diseñé y desarrollé sistemas interactivos como parte de un equipo Agile multifuncional, aplicando prácticas de ingeniería de software al diseño de juegos y simulaciones, incluido el proyecto VR terapéutico Street Simulator (ver Proyectos).',
               ],
             },
           ],
         },
         {
-          title: 'PROYECTOS SELECCIONADOS',
+          title: 'PROYECTOS E INICIATIVAS TÉCNICAS',
           entries: [
-            { title: '', bullets: ['RAG Field Auditor (2026) — pipeline de auditoría con telemetría y visión por computadora, escalado a 27K consultas/mes.'] },
-            { title: '', bullets: ['Agente IA de Soporte TV en WhatsApp (2025-26) — 125K usuarios/mes, 60–65% de auto-resolución.'] },
-            { title: '', bullets: ['Simulador de voz para Call-Center (2026) — serverless en AWS; rotación reducida 50 agentes/mes.'] },
-            { title: '', bullets: ['Asistente IA Empresarial Megan (2026) — copiloto RAG on-premise ultra-seguro para telecom.'] },
-            { title: '', bullets: ['Simulador VR Terapéutico de Calle (2024-25) — Unity C# + Azure; ensayos clínicos con 35+ niños.'] },
+            {
+              title: 'RAG-Powered Field Service AI Auditor (CPK)',
+              tagsLine: 'RAG, Telemetría IoT, Procesamiento JSON, Prevención de Fraude',
+              period: '2026',
+              bullets: [
+                'Arquitecté un asistente de IA RAG (Retrieval-Augmented Generation) seguro integrado con una app móvil para guiar y auditar a técnicos de campo durante instalaciones de telecomunicaciones residenciales, validando actas mediante análisis de imagen y geolocalización para prevenir fraude.',
+                'Diseñé la ingesta de payloads complejos de telemetría JSON (Jitter, RSSI, potencia óptica, datos geoespaciales) capturados vía antenas Wi-Fi móviles.',
+                'Correlacioné variables técnicas contra la política corporativa privada dentro de una base de conocimiento RAG aislada, generando reportes diagnósticos estructurados (impacto, causa raíz, plan de acción) y escalando tickets de forma autónoma cuando era necesario.',
+                'Escalé la adopción de 2,000 a 27,000 consultas mensuales iterando los prompts con base en el feedback de campo, estableciendo la IA como un copiloto técnico de confianza.',
+              ],
+            },
+            {
+              title: 'WhatsApp TV Support AI Agent (XVIEW+)',
+              tagsLine: 'AI Product Management, NLP, AWS, Integración de APIs',
+              period: '2025 – 2026',
+              bullets: [
+                'Lideré el mapeo de procesos de extremo a extremo y el despliegue de un asistente IA de WhatsApp impulsado por NLP que atiende a 125,000 usuarios mensuales, en alianza con Huawei para la integración Meta/WhatsApp.',
+                'Logré una tasa de resolución automatizada de 60% – 65%, conteniendo más de 75,000 consultas mensuales; diseñé el enrutamiento de respaldo "Click to Call" a agentes humanos para escenarios no mapeados.',
+                'Evalué y desplegué un modelo generativo de lenguaje (GLM) optimizado en costo sobre AWS, seleccionado por latencia y métricas de rendimiento, para interpretar quejas técnicas de TV ambiguas en lenguaje natural.',
+                'Mapeé 29 intents de soporte desde cero en 1.5 meses e integré APIs RESTful (GET/POST) con una base de datos operativa de alta transacción para consultas de contrato, agendamiento y ticketing en tiempo real.',
+                'Diseñé un marco de evaluación "LLM-as-a-Judge" para monitorear latencia, coherencia y precisión de respuestas, alcanzando un score de calidad del 80% en el rollout de fase 1.',
+              ],
+            },
+            {
+              title: 'AI Call-Center Voice Training Simulator',
+              tagsLine: 'IA Conversacional, AWS Serverless, Quality Scoring',
+              period: '2026',
+              bullets: [
+                'Construí un simulador de voz IA en tiempo real que replica escenarios complejos de clientes para entrenar y evaluar agentes de call-center, con generación dinámica de prompts y perfiles de personalidad de clientes.',
+                'Diseñé una arquitectura AWS completamente serverless (Bedrock, S3, DuckDB, DeepDub, API Gateway WebSocket) que entrega voz en tiempo real, scoring de calidad por sesión y detección de errores fatales contra las políticas corporativas.',
+                'Reduje el tiempo de onboarding de nuevos agentes y la rotación de personal en 50 personas/mes dentro de los 3 primeros meses del lanzamiento, mejorando directamente la retención y la confianza de los agentes.',
+              ],
+            },
+            {
+              title: '"Megan" Enterprise AI Assistant',
+              tagsLine: 'Product Management, RAG, Despliegue de LLMs Locales',
+              period: '2026',
+              bullets: [
+                'Gestiono el alcance del proyecto y el desarrollo técnico de un asistente IA empresarial para automatizar flujos de soporte al cliente en toda la organización.',
+                'Diseño sistemas RAG y desplegando LLMs locales sobre arquitecturas distribuidas para inferencia segura on-premise.',
+              ],
+            },
+            {
+              title: 'Street Simulator',
+              tagsLine: 'Scrum Master, VR, C#, Unity, PostgreSQL, Azure',
+              period: '2024 – 2025',
+              bullets: [
+                'Gestioné un equipo Agile multifuncional de 7 desarrolladores (SCRUM) construyendo un entorno VR terapéutico que rastrea datos geoespaciales en tiempo real para más de 35 niños autistas; diseñé la infraestructura backend en C#, SQL y Azure.',
+              ],
+            },
           ],
         },
         {
-          title: 'HABILIDADES',
+          title: 'LIDERAZGO',
           entries: [
             {
-              title: '',
+              title: 'Asesor de Tecnología Estatal',
+              period: 'Junio 2024 – Actual',
               bullets: [
-                'IA: Arquitectura RAG, evaluación LLM-as-a-Judge, prompt engineering, copilotos empresariales.',
-                'Ingeniería: Python, C#, Java, TypeScript, SQL (PostgreSQL, DuckDB), React, .NET, Unity.',
-                'Cloud: AWS (Bedrock), GCP, Azure, Docker, Kubernetes, Databricks; LLMs locales (Ollama, vLLM).',
-                'Liderazgo: Gobernanza de IA empresarial, Scrum/Agile, gestión de proveedores (Huawei, Meta), innovación en el sector público.',
+                'Coordiné iniciativas tecnológicas y propuestas de innovación que impactan a más de 100,000 jóvenes en el estado de Nayarit, asegurando un presupuesto acumulado de más de $100,000 MXN.',
               ],
             },
+          ],
+        },
+        {
+          title: 'HABILIDADES TÉCNICAS',
+          entries: [
+            { bullets: ['Gestión y Gobernanza de IA: AI Project Management (PM), Product Roadmapping, RAG Architecture, LLM-as-a-Judge Evaluation, Prompt Security, Risk Management, Vendor Management, Change Management.'] },
+            { bullets: ['Lenguajes de Programación: Python, C#, Java, JavaScript, C++, SQL.'] },
+            { bullets: ['Frameworks y Backend: .NET Core, Angular, Laravel, Django, REST APIs, JSON Processing.'] },
+            { bullets: ['DevOps, Cloud e Infraestructura: Docker, Kubernetes, Fedora Linux, AWS, Google Cloud (GCP), Azure, Databricks.'] },
+            { bullets: ['Modelos y Ecosistemas de IA: Microsoft Copilot Studio, NotebookLM, Ollama, LM Studio, ChatGPT, Gemini, Power Automate, scikit-learn.'] },
+            { bullets: ['Arquitectura y Metodologías: Vibecoding (AI-Assisted Dev), Agile/SCRUM, Mermaid.js, PlantUML, Eraser.io, Jira, Figma, Process Mapping.'] },
           ],
         },
       ],
@@ -108,80 +177,147 @@ function buildContent(lang: Lang): CvContent {
 
   return {
     name: 'JESÚS ROLDÁN MADERO AGUILAR',
-    role: 'AI Project Manager  |  AI Implementation Engineer  |  Software Engineer',
+    role: 'AI Project Manager | AI Implementation Engineer | Software Engineer',
     contacts: [
-      'Guadalajara, Jalisco, Mexico',
-      '(+52) 311 373 8261',
-      'roldanmadero16@outlook.com',
-      'linkedin.com/in/roldanmadero',
-      'github.com/MoonRiver75',
+      'Guadalajara, Jalisco, Mexico | Phone: (+52) 311 373 8261',
+      'roldanmadero16@outlook.com | linkedin.com/in/roldanmadero | github.com/MoonRiver75',
     ],
     sections: [
+      {
+        title: 'PROFESSIONAL PROFILE',
+        entries: [
+          {
+            flush: true,
+            bullets: [
+              'AI Project Manager and Software Engineer with hands-on experience leading enterprise AI transformation, product management, and full-stack implementation at scale. Currently own the end-to-end lifecycle of AI initiatives serving over 150,000 combined monthly users across Megacable\'s customer support and field operations, from business requirements and vendor evaluation to agile execution using AI-assisted development (Vibecoding) and cross-functional coordination with the Chief AI Officer. Strong technical foundation across programming languages, cloud architectures (AWS, Azure, GCP), and RAG/LLM system design. Skilled at bridging AI strategy, corporate governance, and hands-on engineering to ship secure, measurable, highly-adopted intelligent workflows.',
+            ],
+          },
+        ],
+      },
       {
         title: 'EDUCATION',
         entries: [
           {
-            title: 'B.Sc. Computational Systems Engineering',
-            sub: 'Universidad Autónoma de Nayarit  —  Mexico',
-            period: '2025',
+            title: 'B.Sc. Computational Systems Engineering | Software Engineering',
+            sub: 'Universidad Autónoma de Nayarit — Nayarit, Mexico',
+            period: 'Graduation: December 2024',
             bullets: [
-              'Perfect GPA 4.0 / 100%  ·  Golden Key International Honour Society  ·  Top-ranked departmental capstone.',
+              'Golden Key Honours Scholar | GPA: 4.0',
+              'Relevant Coursework: Software Engineering, Applied Machine Learning, Operating Systems, Computer Architecture, Model-Based Programming, Algorithms, and Data Structures.',
             ],
           },
         ],
       },
       {
-        title: 'EXPERIENCE',
+        title: 'AI TRAINING & PROFESSIONAL DEVELOPMENT',
+        entries: [
+          { title: 'Advanced AI Project Management — Ongoing.', bullets: ['Application of AI tools for product roadmapping, execution, stakeholder communication, and Agile project control.'] },
+          { title: 'AI Governance & Compliance — Ongoing.', bullets: ['Governance frameworks, regulatory considerations, responsible adoption, and compliance practices for enterprise AI initiatives.'] },
+          { title: 'Secure Enterprise AI: Risk Management — Ongoing.', bullets: ['Enterprise risk management, data protection, compliance controls, prompt security, and responsible deployment.'] },
+        ],
+      },
+      {
+        title: 'PROFESSIONAL EXPERIENCE',
         entries: [
           {
             title: 'AI Project Manager & Implementation Engineer',
-            sub: 'Megacable  —  Guadalajara, Jalisco, Mexico',
+            sub: 'Megacable — Guadalajara, Mexico',
             period: '2025 – Present',
             bullets: [
-              'Lead the enterprise AI portfolio serving 150,000+ monthly users across RAG auditing, conversational agents, and voice simulation.',
-              'Drove 60–65% automated resolution on a 125K-user WhatsApp agent and scaled a RAG auditor from 2,000 to 27,000 monthly queries.',
+              'Lead end-to-end project management and technical implementation of enterprise AI initiatives, reporting to the Chief AI Officer and coordinating with cross-functional teams and external vendors (Huawei, Meta).',
+              'Own the roadmap for a portfolio of production AI agents (WhatsApp TV support, field-service RAG auditor, call-center voice simulator, enterprise assistant "Megan") serving over 150,000 combined monthly users.',
+              'Conduct technical capability evaluations of enterprise systems (including Oracle Fusion Cloud HCM releases 26A/26B) and Generative Language Models (GLMs) to determine cost, latency, security, and strategic alignment.',
+              'Design operational architectures and process flowcharts utilizing Mermaid.js, PlantUML, and Eraser.io to translate complex business needs into structured engineering deliverables.',
+              'Drive rapid prototyping and solution delivery leveraging Vibecoding (AI-Assisted Development) methodologies, minimizing technical debt and accelerating time-to-market.',
+              'Spearhead enterprise change management for Copilot Pro and NotebookLM adoption, generating business cases, permission workflows, and executive documentation.',
             ],
           },
           {
-            title: 'State Technology Advisor & Innovation Coordinator',
-            sub: 'Government of Nayarit  —  Tepic, Mexico',
+            title: 'Video Game Designer & Software Engineer',
+            sub: 'CICESE UAT — Nayarit, Mexico',
             period: '2024 – 2025',
             bullets: [
-              'Secured $100K+ MXN in state innovation grants and coordinated modernization programs impacting 100,000+ students and youth.',
-            ],
-          },
-          {
-            title: 'Video Game Designer, Scrum Master & Software Engineer',
-            sub: 'CICESE  -  Unidad de Transferencia Tecnológica (UAT)',
-            period: '2024 – 2025',
-            bullets: [
-              'Scrum-mastered a cross-functional team building a VR street-crossing simulator for autistic children; 35+ children in clinical trials.',
+              'Designed and developed interactive systems as part of a cross-functional Agile team, applying software engineering practices to game and simulation design, including the therapeutic VR project Street Simulator (see Projects).',
             ],
           },
         ],
       },
       {
-        title: 'SELECTED PROJECTS',
+        title: 'PROJECTS & TECHNICAL INITIATIVES',
         entries: [
-          { title: '', bullets: ['RAG Field Auditor (2026) — telemetry + computer-vision auditing pipeline scaled to 27K queries/mo.'] },
-          { title: '', bullets: ['WhatsApp TV Support AI Agent (2025-26) — 125K users/mo, 60–65% auto-resolution.'] },
-          { title: '', bullets: ['AI Call-Center Voice Simulator (2026) — serverless AWS; turnover reduced by 50 agents/mo.'] },
-          { title: '', bullets: ['Megan Enterprise AI Assistant (2026) — ultra-secure on-premise RAG copilot for a major telco.'] },
-          { title: '', bullets: ['VR Street Therapeutic Simulator (2024-25) — Unity C# + Azure; clinical trials with 35+ children.'] },
+          {
+            title: 'RAG-Powered Field Service AI Auditor (CPK)',
+            tagsLine: 'RAG, IoT Telemetry, JSON Processing, Fraud Prevention',
+            period: '2026',
+            bullets: [
+              'Architected a secure Retrieval-Augmented Generation (RAG) AI assistant integrated with a mobile app to guide and audit field technicians during residential telecom installations, validating actas via image and geolocation analysis to prevent fraud.',
+              'Engineered ingestion of complex JSON telemetry payloads (Jitter, RSSI, optical power, geospatial data) captured via mobile Wi-Fi antennas.',
+              'Correlated technical variables against private corporate policy within an isolated RAG knowledge base, generating structured diagnostic reports (impact, root cause, action plan) and autonomously escalating tickets when needed.',
+              'Scaled adoption from 2,000 to 27,000 monthly queries by iterating on prompts based on field feedback, establishing the AI as a trusted technical copilot.',
+            ],
+          },
+          {
+            title: 'WhatsApp TV Support AI Agent (XVIEW+)',
+            tagsLine: 'AI Product Management, NLP, AWS, API Integration',
+            period: '2025 – 2026',
+            bullets: [
+              'Led end-to-end process mapping and deployment of an NLP-powered WhatsApp AI assistant serving 125,000 monthly users, partnering with Huawei for Meta/WhatsApp integration.',
+              'Achieved a 60% – 65% automated resolution rate, containing over 75,000 inquiries monthly; engineered "Click to Call" fallback routing for unmapped scenarios to human agents.',
+              'Evaluated and deployed a cost-optimized Generative Language Model (GLM) on AWS, selected on latency and performance metrics, to interpret ambiguous natural-language TV technical complaints.',
+              'Mapped 29 support intents from scratch in 1.5 months and integrated RESTful APIs (GET/POST) with a high-transaction operational database for real-time contract lookups, scheduling, and ticketing.',
+              'Designed an "LLM-as-a-Judge" evaluation framework to monitor response latency, coherence, and accuracy, reaching an 80% quality score in the phase 1 rollout.',
+            ],
+          },
+          {
+            title: 'AI Call-Center Voice Training Simulator',
+            tagsLine: 'Conversational AI, AWS Serverless, Quality Scoring',
+            period: '2026',
+            bullets: [
+              'Built a real-time AI voice simulator that replicates complex customer scenarios to train and evaluate call-center agents, using dynamic prompt generation and customer personality profiles.',
+              'Designed a fully serverless AWS architecture (Bedrock, S3, DuckDB, DeepDub, API Gateway WebSocket) delivering real-time voice, per-session quality scoring, and fatal-error detection against corporate policy adherence.',
+              'Cut new-hire onboarding time and reduced staff turnover by 50 people/month within 3 months of launch, directly improving retention and agent confidence.',
+            ],
+          },
+          {
+            title: '"Megan" Enterprise AI Assistant',
+            tagsLine: 'Product Management, RAG, Local LLM Deployment',
+            period: '2026',
+            bullets: [
+              'Managing project scope and technical development of an enterprise AI assistant to automate customer support workflows across the organization.',
+              'Designing RAG systems and deploying local LLMs on distributed architectures for secure, on-premise inference.',
+            ],
+          },
+          {
+            title: 'Street Simulator',
+            tagsLine: 'Scrum Master, VR, C#, Unity, PostgreSQL, Azure',
+            period: '2024 – 2025',
+            bullets: [
+              'Managed a cross-functional Agile team of 7 developers (SCRUM) building a therapeutic VR environment tracking real-time geospatial data for over 35 autistic children; engineered backend infrastructure in C#, SQL, and Azure.',
+            ],
+          },
         ],
       },
       {
-        title: 'SKILLS',
+        title: 'LEADERSHIP',
         entries: [
           {
-            title: '',
+            title: 'State Technology Advisor',
+            period: 'June 2024 – Present',
             bullets: [
-              'AI: RAG architecture, LLM-as-a-Judge evaluation, prompt engineering, enterprise copilots.',
-              'Engineering: Python, C#, Java, TypeScript, SQL (PostgreSQL, DuckDB), React, .NET, Unity.',
-              'Cloud: AWS (Bedrock), GCP, Azure, Docker, Kubernetes, Databricks; local LLMs (Ollama, vLLM).',
-              'Leadership: Enterprise AI governance, Scrum/Agile, vendor management (Huawei, Meta), public-sector innovation.',
+              'Coordinated technology initiatives and innovation proposals impacting over 100,000 youth in the state of Nayarit, successfully securing an accumulated budget of over $100,000 MXN.',
             ],
           },
+        ],
+      },
+      {
+        title: 'TECHNICAL SKILLS',
+        entries: [
+          { bullets: ['AI Management & Governance: AI Project Management (PM), Product Roadmapping, RAG Architecture, LLM-as-a-Judge Evaluation, Prompt Security, Risk Management, Vendor Management, Change Management.'] },
+          { bullets: ['Programming Languages: Python, C#, Java, JavaScript, C++, SQL.'] },
+          { bullets: ['Frameworks & Backend: .NET Core, Angular, Laravel, Django, REST APIs, JSON Processing.'] },
+          { bullets: ['DevOps, Cloud & Infrastructure: Docker, Kubernetes, Fedora Linux, AWS, Google Cloud (GCP), Azure, Databricks.'] },
+          { bullets: ['AI Models & Ecosystems: Microsoft Copilot Studio, NotebookLM, Ollama, LM Studio, ChatGPT, Gemini, Power Automate, scikit-learn.'] },
+          { bullets: ['Architecture & Methodologies: Vibecoding (AI-Assisted Dev), Agile/SCRUM, Mermaid.js, PlantUML, Eraser.io, Jira, Figma, Process Mapping.'] },
         ],
       },
     ],
@@ -220,10 +356,18 @@ export async function renderCvPdf(lang: Lang): Promise<{ doc: jsPDF; content: Cv
   const marginL = 55
   const marginR = 55
   const marginT = 46
-  const marginB = 46
+  const marginB = 42
   const usableW = pageW - marginL - marginR
+  const lineH = 11
 
   let y = marginT
+
+  const ensureSpace = (needed: number) => {
+    if (y + needed > pageH - marginB) {
+      doc.addPage()
+      y = marginT
+    }
+  }
 
   // Header
   doc.setFont('times', 'bold')
@@ -234,24 +378,17 @@ export async function renderCvPdf(lang: Lang): Promise<{ doc: jsPDF; content: Cv
   doc.setFont('times', 'italic')
   doc.setFontSize(10.5)
   doc.text(content.role, pageW / 2, y, { align: 'center' })
-  y += 14
+  y += 13
 
   doc.setFont('times', 'normal')
   doc.setFontSize(9)
-  doc.text(content.contacts.join('   ·   '), pageW / 2, y, { align: 'center' })
-  y += 8
+  doc.text(content.contacts.join('  |  '), pageW / 2, y, { align: 'center' })
+  y += 7
 
   doc.setDrawColor(0)
   doc.setLineWidth(1)
   doc.line(marginL, y, pageW - marginR, y)
-  y += 14
-
-  const ensureSpace = (needed: number) => {
-    if (y + needed > pageH - marginB) {
-      doc.addPage()
-      y = marginT
-    }
-  }
+  y += 11
 
   for (const section of content.sections) {
     ensureSpace(24)
@@ -260,57 +397,61 @@ export async function renderCvPdf(lang: Lang): Promise<{ doc: jsPDF; content: Cv
     doc.setCharSpace(0.6)
     doc.text(section.title, marginL, y)
     doc.setCharSpace(0)
-    y += 4
+    y += 3.5
     doc.setLineWidth(0.6)
     doc.line(marginL, y, pageW - marginR, y)
-    y += 10
+    y += 8.5
 
     for (const entry of section.entries) {
       if (entry.title) {
-        ensureSpace(18)
+        ensureSpace(16)
         doc.setFont('times', 'bold')
-        doc.setFontSize(10)
+        doc.setFontSize(9.6)
         doc.text(entry.title, marginL, y)
         if (entry.period) {
           doc.setFont('times', 'italic')
           doc.setFontSize(9)
           doc.text(entry.period, pageW - marginR, y, { align: 'right' })
-          doc.setFont('times', 'normal')
-          doc.setFontSize(9.2)
-        } else {
-          doc.setFont('times', 'normal')
-          doc.setFontSize(9.2)
         }
-        y += 12
+        y += 11
 
-        if (entry.sub) {
+        if (entry.tagsLine) {
+          doc.setFont('times', 'italic')
+          doc.setFontSize(8.4)
+          doc.setTextColor(60)
+          doc.text(entry.tagsLine, marginL, y)
+          doc.setTextColor(0)
+          y += 9.5
+        } else if (entry.sub) {
           doc.setFont('times', 'italic')
           doc.setFontSize(8.8)
+          doc.setTextColor(40)
           doc.text(entry.sub, marginL, y)
-          doc.setFont('times', 'normal')
-          doc.setFontSize(9.2)
-          y += 11
+          doc.setTextColor(0)
+          y += 9.5
         }
       }
 
-      const bulletIndent = marginL + 13
-      const wrapW = usableW - 13
-      for (const bullet of entry.bullets) {
-        const lines = wrapLines(doc, bullet, wrapW)
-        ensureSpace(lines.length * 11.5)
-        doc.setFont('times', 'normal')
-        doc.setFontSize(9.2)
-        for (const line of lines) {
-          const isFirst = line === lines[0]
-          doc.text(isFirst ? '•' : '', marginL, y)
-          doc.text(line, isFirst ? bulletIndent : bulletIndent, y)
-          y += 11.5
+      if (entry.bullets) {
+        const bulletIndent = marginL + 12
+        const wrapW = usableW - 12
+        for (const bullet of entry.bullets) {
+          const lines = wrapLines(doc, bullet, wrapW)
+          ensureSpace(lines.length * lineH)
+          doc.setFont('times', 'normal')
+          doc.setFontSize(9.2)
+          for (const line of lines) {
+            const isFirst = line === lines[0]
+            if (!entry.flush) doc.text('•', marginL, y)
+            doc.text(line, isFirst ? bulletIndent : entry.flush ? marginL : bulletIndent, y)
+            y += lineH
+          }
+          y += 1.2
         }
-        y += 1.5
       }
-      y += 3
+      y += 2.2
     }
-    y += 6
+    y += 1.5
   }
 
   return { doc, content }
