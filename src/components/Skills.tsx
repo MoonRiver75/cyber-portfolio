@@ -1,39 +1,9 @@
-const skillGroups = [
-  {
-    code: '[AI_GOVERNANCE]',
-    icon: 'policy',
-    title: 'AI Strategy & Governance',
-    accent: '#00fbfb',
-    tags: ['RAG System Architecture', 'LLM-as-a-Judge Evaluation', 'Huawei & Meta Vendor Ops', 'Enterprise Change Mgmt', 'AI Risk & Security Compliance', 'Product Lifecycle & Roadmaps'],
-    footer: 'EXECUTIVE CO-PILOTING',
-  },
-  {
-    code: '[LANGUAGES]',
-    icon: 'code_blocks',
-    title: 'Core Programming',
-    accent: '#ffabf3',
-    tags: ['Python (Async, FastAPI, PyTorch)', 'C# (.NET Core, Unity Engine)', 'Java (Enterprise Backend)', 'SQL (PostgreSQL, DuckDB)', 'JavaScript / TypeScript', 'C++ (Optimization & Math)'],
-    footer: 'MULTI-PARADIGM ENGINES',
-  },
-  {
-    code: '[INFRASTRUCTURE]',
-    icon: 'cloud_sync',
-    title: 'Cloud & Distributed',
-    accent: '#2ae500',
-    tags: ['Amazon Web Services (Bedrock)', 'Google Cloud Platform', 'Microsoft Azure Cloud', 'Docker & Containerization', 'Kubernetes Orchestration', 'Databricks Data Lakehouse'],
-    footer: 'HIGH-AVAILABILITY CLUSTERS',
-  },
-  {
-    code: '[TOOLS_ECOSYSTEM]',
-    icon: 'terminal',
-    title: 'Tooling & Modeling',
-    accent: '#00fbfb',
-    tags: ['Copilot Studio & Pro', 'NotebookLM & Obsidian', 'Ollama & LM Studio (Local LLMs)', 'Scikit-Learn & Vector Stores', 'Figma & Interactive Prototyping', 'PlantUML & Mermaid Architecture'],
-    footer: 'FULL-CYCLE MLOPS STACK',
-  },
-]
+import { useI18n } from '../i18n'
 
 export default function Skills() {
+  const { t } = useI18n()
+  const { skills } = t
+
   return (
     <section
       id="skills"
@@ -44,19 +14,17 @@ export default function Skills() {
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2 font-code text-[12px] font-medium uppercase tracking-widest text-tertiary-fixed-dim">
               <span className="h-2 w-2 bg-tertiary-fixed-dim" />
-              <span>// 03_CAPABILITIES_MATRIX</span>
+              <span>{skills.kicker}</span>
             </div>
             <h2 className="font-headline-lg uppercase tracking-tight text-primary">
-              Technical &amp; Strategic Arsenal
+              {skills.title}
             </h2>
           </div>
-          <div className="font-code text-[10px] font-bold text-outline">
-            STACK TELEMETRY // SYSTEM CAPABILITIES
-          </div>
+          <div className="font-code text-[10px] font-bold text-outline">{skills.badge}</div>
         </div>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {skillGroups.map((group) => (
+          {skills.groups.map((group) => (
             <div
               key={group.code}
               className="flex flex-col justify-between gap-4 bg-surface p-4"

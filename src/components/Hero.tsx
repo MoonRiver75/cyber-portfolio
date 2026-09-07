@@ -1,3 +1,5 @@
+import { useI18n } from '../i18n'
+
 function GlitchLine({
   text,
   className = '',
@@ -28,15 +30,10 @@ function GlitchLine({
   )
 }
 
-const pills = [
-  { text: '[150K+ MONTHLY USERS]', color: '#00fbfb', border: 'rgba(0,251,251,0.3)', glow: 'rgba(0,251,251,0.2)', pulse: false },
-  { text: '[60-65% AUTO RESOLUTION]', color: '#ffabf3', border: 'rgba(254,0,254,0.3)', glow: 'rgba(254,0,254,0.2)', pulse: false },
-  { text: '[RAG & LLM-AS-A-JUDGE]', color: '#2ae500', border: 'rgba(42,229,0,0.3)', glow: 'rgba(42,229,0,0.25)', pulse: true },
-  { text: '[VIBECODING & AGILE]', color: '#00fbfb', border: 'rgba(0,251,251,0.2)', glow: undefined, pulse: false },
-  { text: '[AWS / GCP / AZURE]', color: '#ffd7f5', border: 'rgba(255,215,245,0.2)', glow: undefined, pulse: false },
-]
-
 export default function Hero() {
+  const { t } = useI18n()
+  const { hero } = t
+
   return (
     <section className="relative w-full overflow-hidden border-b border-surface-light py-12 lg:py-20">
       <div className="dots-grid absolute inset-0 opacity-40" aria-hidden="true" />
@@ -54,12 +51,12 @@ export default function Hero() {
         <div className="flex flex-wrap items-center justify-between gap-2 border-l-2 border-primary-fixed bg-surface-container-low px-4 py-2">
           <div className="flex items-center gap-2 font-code text-[10px] font-bold uppercase tracking-widest text-primary-fixed">
             <span className="inline-block h-2 w-2 animate-ping bg-primary-fixed" />
-            SYS.RUN // AI_TRANSFORMATION::MEGACABLE [ACTIVE_150K_USERS]
+            {hero.sysRun}
           </div>
           <div className="flex flex-wrap items-center gap-4 font-code text-[10px] font-bold text-outline">
-            <span>LOC: GUADALAJARA, JALISCO, MX</span>
-            <span className="text-secondary-fixed-dim">TEL: (+52) 311 373 8261</span>
-            <span className="text-tertiary-fixed-dim">STATUS: PRODUCTION_STABLE</span>
+            <span>{hero.loc}</span>
+            <span className="text-secondary-fixed-dim">{hero.tel}</span>
+            <span className="text-tertiary-fixed-dim">{hero.status}</span>
           </div>
         </div>
 
@@ -67,15 +64,15 @@ export default function Hero() {
         <div className="flex flex-col gap-4">
           <div className="inline-flex items-center gap-2 font-code text-[12px] font-medium uppercase tracking-widest text-secondary">
             <span className="material-symbols-outlined text-[16px]">terminal</span>
-            <span>&gt; IDENTITY::INITIALIZED // AI_PROJECT_MANAGER &amp; IMPLEMENTATION_ENGINEER</span>
+            <span>{hero.identity}</span>
           </div>
 
           <h1 className="font-display-xl uppercase tracking-tight text-primary [text-shadow:0_0_18px_rgba(0,251,251,0.25)]">
-            <GlitchLine text="BUILDING THE" primary="#00fbfb" secondary="#fe00fe" />
+            <GlitchLine text={hero.headline1} primary="#00fbfb" secondary="#fe00fe" />
             <br />
             <GlitchLine
               className="text-primary-fixed [text-shadow:0_0_24px_rgba(0,251,251,0.6)]"
-              text="NEURAL FUTURE."
+              text={hero.headline2}
               primary="#ffffff"
               secondary="#ffabf3"
             />
@@ -83,17 +80,15 @@ export default function Hero() {
 
           <div className="flex flex-col gap-1">
             <div className="font-headline-sm uppercase tracking-wide text-tertiary-fixed-dim">
-              AI Project Manager | AI Implementation Engineer | Software Engineer
+              {hero.roleLine}
             </div>
             <p className="max-w-4xl font-body-lg leading-relaxed text-on-surface-variant">
-              Bridging the gap between enterprise AI strategy, corporate governance, and hands-on
-              engineering. Currently driving AI transformation at Megacable serving{' '}
-              <strong className="text-primary-fixed">150,000+ monthly users</strong> across
-              multi-agent generative systems, real-time RAG diagnostic engines, and high-concurrency
-              telephony platforms.
+              {hero.introPre}
+              <strong className="text-primary-fixed">{hero.introStrong}</strong>
+              {hero.introPost}
             </p>
             <div className="mt-1 flex items-center gap-2 font-code text-[14px] text-outline">
-              <span className="text-primary-fixed">&gt; COMM_LINK:</span>
+              <span className="text-primary-fixed">{hero.commLinkLabel}</span>
               <a
                 className="text-primary underline-offset-4 hover:text-primary-fixed hover:underline"
                 href="mailto:roldanmadero16@outlook.com"
@@ -101,14 +96,14 @@ export default function Hero() {
                 roldanmadero16@outlook.com
               </a>
               <span className="text-outline">|</span>
-              <span>Guadalajara, Jalisco, Mexico</span>
+              <span>{hero.location}</span>
             </div>
           </div>
         </div>
 
         {/* Telemetry pill strip */}
         <div className="flex flex-wrap items-center gap-2">
-          {pills.map((pill) => (
+          {hero.pills.map((pill) => (
             <div
               key={pill.text}
               className="flex items-center gap-2 bg-surface-container px-3 py-1 font-code text-[10px] font-bold uppercase text-primary-fixed"
@@ -133,7 +128,7 @@ export default function Hero() {
             className="group inline-flex items-center justify-center bg-primary-container px-6 py-3 font-code text-[12px] font-medium uppercase tracking-wider text-on-primary-container shadow-[0_0_20px_rgba(0,251,251,0.5)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_#fe00fe,0_0_25px_rgba(0,251,251,0.8)]"
           >
             <span className="relative z-10 flex items-center gap-2">
-              <span>[ VIEW KEY PROJECTS</span>
+              <span>[ {hero.ctaView}</span>
               <span className="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-1">
                 arrow_forward
               </span>
@@ -146,7 +141,7 @@ export default function Hero() {
           >
             <span className="flex items-center gap-2">
               <span>&gt;_</span>
-              <span>[ ENTERPRISE EXPERIENCE ]</span>
+              <span>[ {hero.ctaExperience} ]</span>
             </span>
           </a>
           <a
@@ -157,7 +152,7 @@ export default function Hero() {
           >
             <span className="flex items-center gap-2">
               <span className="material-symbols-outlined text-[16px]">hub</span>
-              <span>[ CONNECT ON LINKEDIN ]</span>
+              <span>[ {hero.ctaLinkedIn} ]</span>
             </span>
           </a>
           <a
@@ -168,7 +163,7 @@ export default function Hero() {
           >
             <span className="flex items-center gap-2">
               <span className="material-symbols-outlined text-[16px]">code</span>
-              <span>[ GITHUB: @MoonRiver75 ]</span>
+              <span>[ {hero.ctaGithub} ]</span>
             </span>
           </a>
         </div>
@@ -180,31 +175,21 @@ export default function Hero() {
               <span className="h-2.5 w-2.5 bg-[#ffb4ab]" />
               <span className="h-2.5 w-2.5 bg-secondary-container" />
               <span className="h-2.5 w-2.5 bg-tertiary-fixed-dim" />
-              <span className="ml-1 text-on-surface">session::root@megacable-ai-core:~$</span>
+              <span className="ml-1 text-on-surface">{hero.terminal.title}</span>
             </div>
             <span className="font-code text-[10px] font-bold text-primary-fixed">
-              AUDIT_SUITE v2.8 // ORCHESTRATOR
+              {hero.terminal.suite}
             </span>
           </div>
           <div className="flex flex-col gap-1 overflow-x-auto font-code text-[14px] text-on-surface">
             <p className="text-tertiary-fixed-dim">
               <span className="text-secondary-fixed-dim">root@megacable-ai-core:~$</span>{' '}
-              python -m enterprise_rag.audit --system &quot;RAG_FIELD_AUDITOR&quot; --telemetry
-              &quot;RSSI, JITTER, OPTICAL_PWR&quot; --scale 27000
+              {hero.terminal.cmd}
             </p>
-            <p className="text-on-surface-variant">
-              [SYSTEM] Ingestion stream linked: Evaluating field technician validation payloads via
-              Geolocation + Image Computer Vision...
-            </p>
-            <p className="text-on-surface-variant">
-              [TELEMETRY] Optical link budget verified | Geo-fence delta &lt; 4.2m | Optical power
-              threshold: PASS (-18.4 dBm)
-            </p>
+            <p className="text-on-surface-variant">{hero.terminal.line1}</p>
+            <p className="text-on-surface-variant">{hero.terminal.line2}</p>
             <p className="flex items-center gap-2 text-primary-fixed">
-              <span>
-                [STATUS] 27,000 queries processed | Fraud prevention: 99.4% | Escalation
-                containment: 65% | Autonomous escalation: ACTIVE
-              </span>
+              <span>{hero.terminal.status}</span>
               <span className="cursor-blink inline-block h-4 w-2 bg-primary-fixed" />
             </p>
           </div>

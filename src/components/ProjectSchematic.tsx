@@ -1,4 +1,4 @@
-type DiagramType =
+export type DiagramType =
   | 'rag-audit'
   | 'whatsapp-agent'
   | 'voice-sim'

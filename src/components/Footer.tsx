@@ -1,14 +1,19 @@
+import { useI18n } from '../i18n'
+
 export default function Footer() {
+  const { t } = useI18n()
+  const { footer } = t
+
   return (
     <footer className="relative w-full overflow-hidden border-t border-surface-light bg-surface-container-lowest py-12">
       <div className="container-cyber relative z-10 flex flex-col items-center justify-between gap-6 md:flex-row">
         <div className="flex flex-col items-center gap-1 md:items-start">
           <div className="flex items-center gap-2 border border-tertiary-fixed-dim/30 bg-surface-container px-3 py-1 font-code text-[12px] font-medium uppercase tracking-widest text-tertiary-fixed-dim shadow-[0_0_10px_rgba(42,229,0,0.2)]">
             <span className="inline-block h-2.5 w-2.5 animate-pulse bg-tertiary-fixed-dim" />
-            SYS_STATUS: ONLINE // ALL INTEL CIRCUITS OPERATIONAL
+            {footer.status}
           </div>
           <p className="mt-1 font-code text-[10px] font-bold tracking-wider text-outline">
-            &copy; 2026 Jes&uacute;s Rold&aacute;n Madero Aguilar. All neural architectures deployed.
+            {footer.copyright}
           </p>
         </div>
 

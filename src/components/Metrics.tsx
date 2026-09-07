@@ -1,59 +1,9 @@
-const metrics = [
-  {
-    value: '150K+',
-    label: 'Monthly Active Users',
-    sub: 'Across Production Agents',
-    color: '#00fbfb',
-    border: 'rgba(0,251,251,0.3)',
-    glow: 'rgba(0,251,251,0.1)',
-  },
-  {
-    value: '60-65%',
-    label: 'Automated Resolution',
-    sub: 'WhatsApp AI Agent',
-    color: '#ffabf3',
-    border: 'rgba(255,171,243,0.4)',
-    glow: 'rgba(254,0,254,0.1)',
-  },
-  {
-    value: '75K+',
-    label: 'Monthly Inquiries',
-    sub: 'Self-Contained',
-    color: '#2ae500',
-    border: 'rgba(42,229,0,0.4)',
-    glow: 'rgba(42,229,0,0.1)',
-  },
-  {
-    value: '13.5x',
-    label: 'Query Scaling',
-    sub: '2K → 27K Field Auditor',
-    color: '#00fbfb',
-    border: 'rgba(0,251,251,0.3)',
-  },
-  {
-    value: '-50/mo',
-    label: 'Staff Turnover',
-    sub: 'Voice Sim Onboarding',
-    color: '#ffabf3',
-    border: 'rgba(255,171,243,0.3)',
-  },
-  {
-    value: '80%',
-    label: 'Quality Score',
-    sub: '29 Intents in 1.5 Mos',
-    color: '#2ae500',
-    border: 'rgba(42,229,0,0.3)',
-  },
-  {
-    value: '$100K+',
-    label: 'MXN State Budget',
-    sub: 'Tech Innovation Grant',
-    color: '#00fbfb',
-    border: 'rgba(0,251,251,0.3)',
-  },
-]
+import { useI18n } from '../i18n'
 
 export default function Metrics() {
+  const { t } = useI18n()
+  const { metrics } = t
+
   return (
     <section
       id="metrics"
@@ -63,15 +13,13 @@ export default function Metrics() {
         <div className="flex flex-wrap items-center justify-between gap-2 font-code text-[10px] font-bold">
           <div className="flex items-center gap-2 uppercase tracking-widest text-primary-fixed">
             <span className="material-symbols-outlined text-[16px]">query_stats</span>
-            <span>// ENTERPRISE_METRICS_HUD :: REAL_WORLD_PRODUCTION_IMPACT</span>
+            <span>{metrics.kicker}</span>
           </div>
-          <div className="text-outline">
-            VALIDATED: MEGACABLE AUDIT CLUSTER // 2025-2026 CYCLE
-          </div>
+          <div className="text-outline">{metrics.badge}</div>
         </div>
 
         <div className="grid grid-cols-2 gap-2 md:grid-cols-4 lg:grid-cols-7">
-          {metrics.map((m) => (
+          {metrics.items.map((m) => (
             <div
               key={m.label}
               className="flex flex-col gap-1 border bg-surface-container-lowest p-2"

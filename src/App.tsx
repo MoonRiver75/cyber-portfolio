@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion'
+import { LanguageProvider } from './i18n'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Metrics from './components/Metrics'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
+import ResumeDownload from './components/ResumeDownload'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -15,7 +17,7 @@ const fadeUp = {
   transition: { duration: 0.55, ease: 'easeOut' as const },
 }
 
-function App() {
+function Site() {
   return (
     <>
       <div className="scanline" aria-hidden="true" />
@@ -40,10 +42,21 @@ function App() {
         <Skills />
       </motion.div>
       <motion.div {...fadeUp}>
+        <ResumeDownload />
+      </motion.div>
+      <motion.div {...fadeUp}>
         <Contact />
       </motion.div>
       <Footer />
     </>
+  )
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <Site />
+    </LanguageProvider>
   )
 }
 
