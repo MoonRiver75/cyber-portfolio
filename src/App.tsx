@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { LanguageProvider } from './i18n'
+import NeuralBackground from './components/NeuralBackground'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Metrics from './components/Metrics'
@@ -21,6 +22,7 @@ function Site() {
   return (
     <>
       <div className="scanline" aria-hidden="true" />
+      <NeuralBackground />
       <Navbar />
       <motion.div
         initial={{ opacity: 0, y: 24 }}
