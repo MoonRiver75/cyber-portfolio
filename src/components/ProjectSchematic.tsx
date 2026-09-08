@@ -24,9 +24,9 @@ function TelemetryLabel({ text, color }: { text: string; color: string }) {
 function RagAuditDiagram() {
   return (
     <svg className="w-full h-full text-primary-fixed" fill="none" stroke="currentColor" viewBox="0 0 320 130">
-      <TelemetryLabel text="> TELEMETRY: RSSI | JITTER | OPTICAL_PWR" color="#00ffff" />
+      <TelemetryLabel text="> TELEMETRY: SIGNAL | JITTER | LINK_PWR" color="#00ffff" />
       <rect fill="#1c1b1b" height="40" stroke="#00ffff" strokeWidth="1.5" width="50" x="15" y="45" />
-      <text fill="#00ffff" fontFamily="monospace" fontSize="7" x="18" y="60">APP ACTA</text>
+      <text fill="#00ffff" fontFamily="monospace" fontSize="7" x="18" y="60">FIELD APP</text>
       <text fill="#b9cac9" fontFamily="monospace" fontSize="6.5" x="18" y="72">GEO + IMG</text>
       <line stroke="#00ffff" strokeDasharray="2 2" strokeWidth="1.5" x1="65" x2="105" y1="65" y2="65" />
       <polygon fill="#1c1b1b" points="125,45 145,65 125,85 105,65" stroke="#ff8ff7" strokeWidth="1.5" />
@@ -36,7 +36,7 @@ function RagAuditDiagram() {
       <rect fill="#1c1b1b" height="26" stroke="#39ff14" strokeWidth="1.5" width="55" x="185" y="27" />
       <text fill="#39ff14" fontFamily="monospace" fontSize="6.5" x="188" y="43">POLICY RAG</text>
       <rect fill="#1c1b1b" height="26" stroke="#00ffff" strokeWidth="1.5" width="55" x="185" y="77" />
-      <text fill="#00ffff" fontFamily="monospace" fontSize="6.5" x="190" y="93">CV DIAGNOSIS</text>
+      <text fill="#00ffff" fontFamily="monospace" fontSize="6.5" x="190" y="93">ACT VALIDATION</text>
       <line stroke="#39ff14" strokeWidth="2" x1="240" x2="275" y1="40" y2="65" />
       <line stroke="#00ffff" strokeWidth="2" x1="240" x2="275" y1="90" y2="65" />
       <circle cx="290" cy="65" fill="#39ff14" r="14" />
@@ -48,19 +48,19 @@ function RagAuditDiagram() {
 function WhatsAppDiagram() {
   return (
     <svg className="w-full h-full text-secondary" fill="none" stroke="currentColor" viewBox="0 0 320 130">
-      <TelemetryLabel text="> CONTAINMENT: 75,000+ INQUIRIES/MO" color="#e5e2e1" />
+      <TelemetryLabel text="> CONTAINMENT: 70K+ INQUIRIES/MO" color="#e5e2e1" />
       <rect fill="#1c1b1b" height="34" stroke="#ff8ff7" strokeWidth="1.5" width="55" x="15" y="48" />
-      <text fill="#ff8ff7" fontFamily="monospace" fontSize="7" x="20" y="62">META / WA</text>
+      <text fill="#ff8ff7" fontFamily="monospace" fontSize="7" x="20" y="62">MESSAGING / WA</text>
       <text fill="#b9cac9" fontFamily="monospace" fontSize="6.5" x="20" y="74">29 INTENTS</text>
       <line stroke="#ff8ff7" strokeWidth="2" x1="70" x2="110" y1="65" y2="65" />
       <rect fill="#1c1b1b" height="50" stroke="#ff00ff" strokeWidth="2" width="70" x="110" y="40" />
       <text fill="#ff00ff" fontFamily="monospace" fontSize="7" x="115" y="58">AWS GEN-AI</text>
-      <text fill="#00ffff" fontFamily="monospace" fontSize="6.5" x="115" y="70">HUAWEI STACK</text>
+      <text fill="#00ffff" fontFamily="monospace" fontSize="6.5" x="115" y="70">LLM LAYER</text>
       <text fill="#39ff14" fontFamily="monospace" fontSize="6.5" x="115" y="82">LLM-JUDGE</text>
       <path d="M180 55 H 220 V 35 H 245" fill="none" stroke="#39ff14" strokeWidth="1.8" />
       <path d="M180 75 H 220 V 95 H 245" fill="none" stroke="#ff8ff7" strokeDasharray="3 2" strokeWidth="1.8" />
       <rect fill="#1c1b1b" height="24" stroke="#39ff14" strokeWidth="1.5" width="65" x="245" y="23" />
-      <text fill="#39ff14" fontFamily="monospace" fontSize="6.5" x="249" y="38">AUTO: 60-65%</text>
+      <text fill="#39ff14" fontFamily="monospace" fontSize="6.5" x="249" y="38">{'AUTO: >60%'}</text>
       <rect fill="#1c1b1b" height="24" stroke="#ff8ff7" strokeWidth="1.5" width="65" x="245" y="83" />
       <text fill="#ff8ff7" fontFamily="monospace" fontSize="6.5" x="249" y="98">CLICK-TO-CALL</text>
     </svg>
@@ -90,7 +90,7 @@ function VoiceSimDiagram() {
   )
 }
 
-function MeganDiagram() {
+function EnterpriseCopilotDiagram() {
   return (
     <svg className="w-full h-full text-primary-fixed" fill="none" stroke="currentColor" viewBox="0 0 320 130">
       <TelemetryLabel text="> ON-PREMISE SECURE ENTERPRISE INFERENCE" color="#00ffff" />
@@ -101,12 +101,12 @@ function MeganDiagram() {
       <path d="M65 45 H 110" stroke="#00ffff" strokeWidth="1.5" />
       <path d="M65 85 H 110" stroke="#00ffff" strokeWidth="1.5" />
       <circle cx="130" cy="65" fill="#1c1b1b" r="20" stroke="#39ff14" strokeWidth="2" />
-      <text fill="#39ff14" fontFamily="monospace" fontSize="6.5" x="115" y="68">V-STORE</text>
+      <text fill="#39ff14" fontFamily="monospace" fontSize="6.5" x="115" y="68">VECTOR STORE</text>
       <path d="M150 65 H 190" stroke="#39ff14" strokeWidth="2" />
       <rect fill="#1c1b1b" height="50" stroke="#ff8ff7" strokeWidth="1.8" width="70" x="190" y="40" />
       <text fill="#ff8ff7" fontFamily="monospace" fontSize="6.5" x="195" y="58">LOCAL LLM</text>
       <text fill="#b9cac9" fontFamily="monospace" fontSize="6" x="195" y="69">AIR-GAPPED</text>
-      <text fill="#00ffff" fontFamily="monospace" fontSize="6" x="195" y="80">ZERO EXFIL</text>
+      <text fill="#00ffff" fontFamily="monospace" fontSize="6" x="195" y="80">SECURE LOCAL</text>
       <line stroke="#ff8ff7" strokeWidth="2" x1="260" x2="285" y1="65" y2="65" />
       <polygon fill="#00ffff" points="295,55 305,65 295,75 285,65" />
     </svg>
@@ -123,7 +123,7 @@ function VrStreetDiagram() {
       <line opacity="0.4" stroke="#ff8ff7" strokeWidth="1" x1="160" x2="240" y1="20" y2="120" />
       <line opacity="0.4" stroke="#ff8ff7" strokeWidth="1" x1="160" x2="300" y1="20" y2="120" />
       <rect fill="#1c1b1b" height="15" stroke="#00ffff" strokeWidth="1.5" width="120" x="100" y="80" />
-      <text fill="#00ffff" fontFamily="monospace" fontSize="7" x="120" y="91">CROSSWALK SIM</text>
+      <text fill="#00ffff" fontFamily="monospace" fontSize="7" x="120" y="91">STREET SIM</text>
       <circle cx="160" cy="50" fill="#39ff14" r="6" />
       <text fill="#39ff14" fontFamily="monospace" fontSize="7" x="172" y="53">GAZE_TRACK: 60Hz</text>
       <rect fill="#1c1b1b" height="24" stroke="#ff00ff" strokeWidth="1.5" width="70" x="220" y="15" />
@@ -136,7 +136,7 @@ const diagramMap: Record<DiagramType, React.FC> = {
   'rag-audit': RagAuditDiagram,
   'whatsapp-agent': WhatsAppDiagram,
   'voice-sim': VoiceSimDiagram,
-  megan: MeganDiagram,
+  megan: EnterpriseCopilotDiagram,
   'vr-street': VrStreetDiagram,
 }
 

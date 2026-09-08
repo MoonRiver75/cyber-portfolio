@@ -96,7 +96,7 @@ export const en: Strings = {
     ],
   },
   hero: {
-    sysRun: 'SYS.RUN // AI_TRANSFORMATION::MEGACABLE [ACTIVE_150K_USERS]',
+    sysRun: 'SYS.RUN // AI_TRANSFORMATION::MEGACABLE [ACTIVE_100K_USERS]',
     loc: 'LOC: GUADALAJARA, JALISCO, MX',
     tel: 'TEL: (+52) 311 373 8261',
     status: 'STATUS: PRODUCTION_STABLE',
@@ -106,14 +106,14 @@ export const en: Strings = {
     roleLine: 'AI Project Manager | AI Implementation Engineer | Software Engineer',
     introPre:
       'Bridging the gap between enterprise AI strategy, corporate governance, and hands-on engineering. Currently driving AI transformation at Megacable serving ',
-    introStrong: '150,000+ monthly users',
+    introStrong: '100,000+ monthly users',
     introPost:
       ' across multi-agent generative systems, real-time RAG diagnostic engines, and high-concurrency telephony platforms.',
     commLinkLabel: '> COMM_LINK:',
     location: 'Guadalajara, Jalisco, Mexico',
     pills: [
-      { text: '[150K+ MONTHLY USERS]', color: '#00ffff', border: 'rgba(0,255,255,0.3)', glow: 'rgba(0,255,255,0.2)' },
-      { text: '[60-65% AUTO RESOLUTION]', color: '#ff8ff7', border: 'rgba(255,0,255,0.3)', glow: 'rgba(255,0,255,0.2)' },
+      { text: '[100K+ USERS]', color: '#00ffff', border: 'rgba(0,255,255,0.3)', glow: 'rgba(0,255,255,0.2)' },
+      { text: '[60%+ AUTO-RESOLUTION]', color: '#ff8ff7', border: 'rgba(255,0,255,0.3)', glow: 'rgba(255,0,255,0.2)' },
       { text: '[RAG & LLM-AS-A-JUDGE]', color: '#39ff14', border: 'rgba(57,255,20,0.3)', glow: 'rgba(57,255,20,0.25)', pulse: true },
       { text: '[VIBECODING & AGILE]', color: '#00ffff', border: 'rgba(0,255,255,0.2)', glow: undefined },
       { text: '[AWS / GCP / AZURE]', color: '#ffb7f2', border: 'rgba(255,183,242,0.2)', glow: undefined },
@@ -123,26 +123,25 @@ export const en: Strings = {
     ctaLinkedIn: 'CONNECT ON LINKEDIN',
     ctaGithub: 'GITHUB: @MoonRiver75',
     terminal: {
-      title: 'session::root@megacable-ai-core:~$',
-      suite: 'AUDIT_SUITE v2.8 // ORCHESTRATOR',
-      cmd: 'python -m enterprise_rag.audit --system "RAG_FIELD_AUDITOR" --telemetry "RSSI, JITTER, OPTICAL_PWR" --scale 27000',
+      title: 'session::root@ai-core-01:~$',
+      suite: 'FIELD_AUDIT_ENGINE // ORCHESTRATOR',
+      cmd: 'python -m field_audit.engine --system "FIELD_AUDIT_V1" --telemetry "SIGNAL, GEO, IMG" --scale 100k',
       line1:
         '[SYSTEM] Ingestion stream linked: Evaluating field technician validation payloads via Geolocation + Image Computer Vision...',
       line2:
-        '[TELEMETRY] Optical link budget verified | Geo-fence delta < 4.2m | Optical power threshold: PASS (-18.4 dBm)',
+        '[TELEMETRY] Link budget verified | Geo-fence delta within limits | Optical power threshold: PASS',
       status:
-        '[STATUS] 27,000 queries processed | Fraud prevention: 99.4% | Escalation containment: 65% | Autonomous escalation: ACTIVE',
+        '[STATUS] 100K+ queries processed | Validation accuracy: HIGH | Escalation containment: SUSTAINED | Autonomous escalation: ACTIVE',
     },
   },
   metrics: {
     kicker: '// ENTERPRISE_METRICS_HUD :: REAL_WORLD_PRODUCTION_IMPACT',
-    badge: 'VALIDATED: MEGACABLE AUDIT CLUSTER // 2025-2026 CYCLE',
+    badge: 'VALIDATED: PRODUCTION CLUSTER // 2025-2026 CYCLE',
     items: [
-      { value: '150K+', label: 'Monthly Active Users', sub: 'Across Production Agents', color: '#00ffff', border: 'rgba(0,255,255,0.3)', glow: 'rgba(0,255,255,0.1)' },
-      { value: '60-65%', label: 'Automated Resolution', sub: 'WhatsApp AI Agent', color: '#ff8ff7', border: 'rgba(255,143,247,0.4)', glow: 'rgba(255,0,255,0.1)' },
-      { value: '75K+', label: 'Monthly Inquiries', sub: 'Self-Contained', color: '#39ff14', border: 'rgba(57,255,20,0.4)', glow: 'rgba(57,255,20,0.1)' },
-      { value: '13.5x', label: 'Query Scaling', sub: '2K → 27K Field Auditor', color: '#00ffff', border: 'rgba(0,255,255,0.3)' },
-      { value: '-50/mo', label: 'Staff Turnover', sub: 'Voice Sim Onboarding', color: '#ff8ff7', border: 'rgba(255,143,247,0.3)' },
+      { value: '100K+', label: 'Monthly Active Users', sub: 'Across Production Agents', color: '#00ffff', border: 'rgba(0,255,255,0.3)', glow: 'rgba(0,255,255,0.1)' },
+      { value: '60%+', label: 'Automated Resolution', sub: 'WhatsApp AI Agent', color: '#ff8ff7', border: 'rgba(255,143,247,0.4)', glow: 'rgba(255,0,255,0.1)' },
+      { value: '70K+', label: 'Monthly Inquiries', sub: 'Self-Contained', color: '#39ff14', border: 'rgba(57,255,20,0.4)', glow: 'rgba(57,255,20,0.1)' },
+      { value: '×10+', label: 'Query Scaling', sub: 'SCALE: Field Audit', color: '#00ffff', border: 'rgba(0,255,255,0.3)' },
       { value: '80%', label: 'Quality Score', sub: '29 Intents in 1.5 Mos', color: '#39ff14', border: 'rgba(57,255,20,0.3)' },
       { value: '$100K+', label: 'MXN State Budget', sub: 'Tech Innovation Grant', color: '#00ffff', border: 'rgba(0,255,255,0.3)' },
     ],
@@ -154,59 +153,59 @@ export const en: Strings = {
     items: [
       {
         sysId: 'RAG-AUDIT-2026',
-        stats: 'SCALE: 2K → 27K/MO',
+        stats: 'SCALE: 10K+/MO',
         eyebrow: '● TELECOMMUNICATIONS AUDIT & CV',
         title: 'RAG Field Auditor | AI Assistant (2026)',
         description:
-          "Challenge & Architecture: Auditing field technician 'actas' and validation documents. Built an ingestion pipeline parsing JSON telemetry (Jitter, RSSI, optical power levels), cross-referencing corporate operational policy in an isolated vector RAG system with image and geolocation Computer Vision verification.",
+          "Challenge & Architecture: Auditing field technician 'actas' and validation documents. Built an ingestion pipeline parsing structured telemetry (network signal metrics), cross-referencing corporate operational policy in an isolated vector RAG system with image and geolocation Computer Vision verification.",
         impactLabel: 'Quantified Impact:',
         impact:
-          'Scaled system capacity from 2,000 to 27,000 monthly queries; prevented widespread fraud and automated escalation pathways.',
+          'Scaled system capacity to tens of thousands of monthly queries; reduced validation discrepancies and automated escalation pathways.',
         tags: ['RAG', 'Mobile App', 'Computer Vision', 'Geolocation', 'Telemetry Audit'],
         diagram: 'rag-audit',
         accent: '#00ffff',
         border: 'rgba(0,255,255,0.3)',
       },
       {
-        sysId: 'XVIEW-WA-AGENT',
-        stats: 'USERS: 125,000/MO',
+        sysId: 'WA-SUPPORT-AGENT',
+        stats: 'USERS: 100K+/MO',
         eyebrow: '● CONVERSATIONAL AI & TELCO SUPPORT',
-        title: 'WhatsApp TV Support AI Agent (XVIEW+) (2025 - 2026)',
+        title: 'WhatsApp TV Support AI Agent (2025 - 2026)',
         description:
-          'Challenge & Architecture: Production conversational solution mapped across 29 customer intents in 1.5 months. Integrated AWS Generative Language Models with WhatsApp Business API, Huawei partnership frameworks, and rigorous LLM-as-a-Judge evaluations.',
+          'Challenge & Architecture: Production conversational solution mapped across 29 customer intents in 1.5 months. Integrated AWS Generative Language Models with WhatsApp Business API, external vendor frameworks, and rigorous LLM-as-a-Judge evaluations.',
         impactLabel: 'Quantified Impact:',
         impact:
-          '125,000 monthly users; achieved 60–65% auto-resolution rate, containing 75,000+ inquiries monthly with seamless click-to-call human fallback.',
-        tags: ['NLP', 'AWS Bedrock/LLMs', 'WhatsApp API', 'Huawei Tech', 'LLM-as-a-Judge'],
+          '100K+ monthly users; achieved a 60%+ auto-resolution rate, containing 70K+ inquiries monthly with seamless click-to-call human fallback.',
+        tags: ['NLP', 'AWS Bedrock/LLMs', 'WhatsApp API', 'External Vendor Integration', 'LLM-as-a-Judge'],
         diagram: 'whatsapp-agent',
         accent: '#ff8ff7',
         border: 'rgba(255,143,247,0.4)',
       },
       {
         sysId: 'VOICE-SIM-2026',
-        stats: 'RETENTION: +50/MO',
+        stats: 'RETENTION: IMPROVED',
         eyebrow: '● REAL-TIME VOICE SIMULATION & MLOPS',
         title: 'AI Call-Center Voice Training Simulator (2026)',
         description:
           'Challenge & Architecture: High call-center turnover and long onboarding cycles. Engineered an AWS serverless architecture (Bedrock, S3, DuckDB, DeepDub, API Gateway WebSocket) with dynamic prompt generation across diverse customer personas and fatal-error policy detection.',
         impactLabel: 'Quantified Impact:',
         impact:
-          'Reduced operational staff turnover by 50 agents per month; cut training time from 4 weeks to 8 days with live scoring.',
+          'Reduced operational staff turnover significantly; cut training time from weeks to days with live scoring.',
         tags: ['AWS Bedrock', 'WebSocket', 'DuckDB', 'DeepDub', 'Serverless'],
         diagram: 'voice-sim',
         accent: '#39ff14',
         border: 'rgba(57,255,20,0.4)',
       },
       {
-        sysId: 'MEGAN-ENT-2026',
+        sysId: 'ENT-COPILOT-2026',
         stats: 'CORE::ENTERPRISE_RAG',
         eyebrow: '● INTERNAL COPILOT & CORPORATE INTELLIGENCE',
-        title: "'Megan' Enterprise AI Assistant (2026 - Active)",
+        title: 'Enterprise AI Copilot (2026 - Active)',
         description:
           'Challenge & Architecture: Enterprise Product Management of internal generative copilot. Combines proprietary RAG architectures with distributed local LLMs (Ollama / vLLM) for ultra-secure, air-gapped corporate document search, HR automation, and strategic synthesis.',
         impactLabel: 'Strategic Impact:',
         impact:
-          'Empowered executive and operational tiers with sub-second verified knowledge retrieval under stringent corporate data sovereignty.',
+          'Empowered executive and operational tiers with real-time verified knowledge retrieval under stringent corporate data sovereignty.',
         tags: ['Enterprise PM', 'RAG Architecture', 'Local LLMs', 'Data Sovereignty'],
         diagram: 'megan',
         accent: '#00ffff',
@@ -243,11 +242,11 @@ export const en: Strings = {
         accent: '#00ffff',
         border: '#00ffff',
         description:
-          'Reporting directly to the Chief AI Officer (CAIO), steering the end-to-end artificial intelligence portfolio serving 150,000+ monthly users. Leading multi-disciplinary squads across conversational engineering, computer vision auditing, and automated voice simulation.',
+          'Reporting directly to the Chief AI Officer (CAIO), steering the end-to-end artificial intelligence portfolio serving 100,000+ monthly users. Leading multi-disciplinary squads across conversational engineering, computer vision auditing, and automated voice simulation.',
         details: [
           {
             title: '> Enterprise Governance:',
-            text: 'Evaluating Oracle Fusion Cloud HCM 26A/26B updates, Generative Language Models (GLM) selection, and multi-cloud security compliance.',
+            text: 'Evaluating enterprise systems (including Oracle Fusion Cloud HCM), Generative Language Models (GLM) selection, and multi-cloud security compliance.',
             color: '#00ffff',
           },
           {
@@ -405,7 +404,7 @@ const es: Strings = {
     ],
   },
   hero: {
-    sysRun: 'SYS.RUN // AI_TRANSFORMATION::MEGACABLE [ACTIVO_150K_USUARIOS]',
+    sysRun: 'SYS.RUN // AI_TRANSFORMATION::MEGACABLE [ACTIVO_100K_USUARIOS]',
     loc: 'LOC: GUADALAJARA, JALISCO, MX',
     tel: 'TEL: (+52) 311 373 8261',
     status: 'ESTADO: PRODUCCIÓN_ESTABLE',
@@ -415,14 +414,14 @@ const es: Strings = {
     roleLine: 'AI Project Manager | AI Implementation Engineer | Software Engineer',
     introPre:
       'Uniendo la brecha entre la estrategia empresarial de IA, la gobernanza corporativa y la ingeniería hands-on. Actualmente impulsando la transformación de IA en Megacable, sirviendo a ',
-    introStrong: '150,000+ usuarios mensuales',
+    introStrong: '100,000+ usuarios mensuales',
     introPost:
       ' a través de sistemas generativos multi-agente, motores RAG de diagnóstico en tiempo real y plataformas de telefonía de alta concurrencia.',
     commLinkLabel: '> MEDIO_COM:',
     location: 'Guadalajara, Jalisco, México',
     pills: [
-      { text: '[150K+ USUARIOS/MES]', color: '#00ffff', border: 'rgba(0,255,255,0.3)', glow: 'rgba(0,255,255,0.2)' },
-      { text: '[60-65% AUTO-RESOLUCIÓN]', color: '#ff8ff7', border: 'rgba(255,0,255,0.3)', glow: 'rgba(255,0,255,0.2)' },
+      { text: '[100K+ USUARIOS]', color: '#00ffff', border: 'rgba(0,255,255,0.3)', glow: 'rgba(0,255,255,0.2)' },
+      { text: '[60%+ AUTO-RESOLUCIÓN]', color: '#ff8ff7', border: 'rgba(255,0,255,0.3)', glow: 'rgba(255,0,255,0.2)' },
       { text: '[RAG & LLM-AS-A-JUDGE]', color: '#39ff14', border: 'rgba(57,255,20,0.3)', glow: 'rgba(57,255,20,0.25)', pulse: true },
       { text: '[VIBECODING & AGILE]', color: '#00ffff', border: 'rgba(0,255,255,0.2)', glow: undefined },
       { text: '[AWS / GCP / AZURE]', color: '#ffb7f2', border: 'rgba(255,183,242,0.2)', glow: undefined },
@@ -432,26 +431,25 @@ const es: Strings = {
     ctaLinkedIn: 'CONECTAR EN LINKEDIN',
     ctaGithub: 'GITHUB: @MoonRiver75',
     terminal: {
-      title: 'sesión::root@megacable-ai-core:~$',
-      suite: 'AUDIT_SUITE v2.8 // ORQUESTADOR',
-      cmd: 'python -m enterprise_rag.audit --system "RAG_FIELD_AUDITOR" --telemetry "RSSI, JITTER, OPTICAL_PWR" --scale 27000',
+      title: 'sesión::root@ai-core-01:~$',
+      suite: 'FIELD_AUDIT_ENGINE // ORQUESTADOR',
+      cmd: 'python -m field_audit.engine --system "FIELD_AUDIT_V1" --telemetry "SIGNAL, GEO, IMG" --scale 100k',
       line1:
         '[SISTEMA] Flujo de ingesta enlazado: evaluando cargas de validación de técnicos de campo mediante Geolocalización + Visión por Computadora de imágenes...',
       line2:
-        '[TELEMETRÍA] Presupuesto de enlace óptico verificado | Delta de geo-cerca < 4.2m | Umbral de potencia óptica: PASS (-18.4 dBm)',
+        '[TELEMETRÍA] Presupuesto de enlace verificado | Delta de geo-cerca dentro de límites | Umbral de potencia óptica: PASS',
       status:
-        '[ESTADO] 27,000 consultas procesadas | Prevención de fraude: 99.4% | Contención de escalamientos: 65% | Escalamiento autónomo: ACTIVO',
+        '[ESTADO] 100K+ consultas procesadas | Precisión de validación: ALTA | Contención de escalamientos: SOSTENIDA | Escalamiento autónomo: ACTIVO',
     },
   },
   metrics: {
     kicker: '// HUD_DE_MÉTRICAS_EMPRESARIALES :: IMPACTO_REAL_DE_PRODUCCIÓN',
-    badge: 'VALIDADO: CLÚSTER DE AUDITORÍA MEGACABLE // CICLO 2025-2026',
+    badge: 'VALIDADO: CLÚSTER DE PRODUCCIÓN // CICLO 2025-2026',
     items: [
-      { value: '150K+', label: 'Usuarios Activos', sub: 'Agentes en Producción', color: '#00ffff', border: 'rgba(0,255,255,0.3)', glow: 'rgba(0,255,255,0.1)' },
-      { value: '60-65%', label: 'Resolución Automatizada', sub: 'Agente IA de WhatsApp', color: '#ff8ff7', border: 'rgba(255,143,247,0.4)', glow: 'rgba(255,0,255,0.1)' },
-      { value: '75K+', label: 'Consultas Mensuales', sub: 'Contenidas en el Sistema', color: '#39ff14', border: 'rgba(57,255,20,0.4)', glow: 'rgba(57,255,20,0.1)' },
-      { value: '13.5x', label: 'Escalamiento de Consultas', sub: '2K → 27K Auditor de Campo', color: '#00ffff', border: 'rgba(0,255,255,0.3)' },
-      { value: '-50/mes', label: 'Rotación de Personal', sub: 'Onboarding Voice Sim', color: '#ff8ff7', border: 'rgba(255,143,247,0.3)' },
+      { value: '100K+', label: 'Usuarios Activos', sub: 'Agentes en Producción', color: '#00ffff', border: 'rgba(0,255,255,0.3)', glow: 'rgba(0,255,255,0.1)' },
+      { value: '60%+', label: 'Resolución Automatizada', sub: 'Agente IA de WhatsApp', color: '#ff8ff7', border: 'rgba(255,143,247,0.4)', glow: 'rgba(255,0,255,0.1)' },
+      { value: '70K+', label: 'Consultas Mensuales', sub: 'Contenidas en el Sistema', color: '#39ff14', border: 'rgba(57,255,20,0.4)', glow: 'rgba(57,255,20,0.1)' },
+      { value: '×10+', label: 'Escalamiento de Consultas', sub: 'ESCALA: Auditor de Campo', color: '#00ffff', border: 'rgba(0,255,255,0.3)' },
       { value: '80%', label: 'Puntaje de Calidad', sub: '29 Intents en 1.5 Meses', color: '#39ff14', border: 'rgba(57,255,20,0.3)' },
       { value: '$100K+', label: 'Presupuesto Estatal MXN', sub: 'Beca de Innovación', color: '#00ffff', border: 'rgba(0,255,255,0.3)' },
     ],
@@ -463,59 +461,59 @@ const es: Strings = {
     items: [
       {
         sysId: 'RAG-AUDIT-2026',
-        stats: 'ESCALA: 2K → 27K/MES',
+        stats: 'ESCALA: 10K+/MES',
         eyebrow: '● AUDITORÍA DE TELECOMUNICACIONES & CV',
         title: 'RAG Field Auditor | Asistente IA (2026)',
         description:
-          'Reto y Arquitectura: Auditoría de "actas" de técnicos de campo y documentos de validación. Pipeline de ingesta que parsea telemetría JSON (Jitter, RSSI, niveles de potencia óptica), cruzándola con la política operativa corporativa en un sistema RAG vectorial aislado, con verificación por Computer Vision de imágenes y geolocalización.',
+          'Reto y Arquitectura: Auditoría de "actas" de técnicos de campo y documentos de validación. Pipeline de ingesta que parsea telemetría estructurada (métricas de señal de red), cruzándola con la política operativa corporativa en un sistema RAG vectorial aislado, con verificación por Computer Vision de imágenes y geolocalización.',
         impactLabel: 'Impacto Cuantificado:',
         impact:
-          'Escaló la capacidad del sistema de 2,000 a 27,000 consultas mensuales; previno fraude masivo y automatizó rutas de escalamiento.',
+          'Escaló la capacidad del sistema a decenas de miles de consultas mensuales; redujo discrepancias de validación y automatizó rutas de escalamiento.',
         tags: ['RAG', 'App Móvil', 'Computer Vision', 'Geolocalización', 'Auditoría de Telemetría'],
         diagram: 'rag-audit',
         accent: '#00ffff',
         border: 'rgba(0,255,255,0.3)',
       },
       {
-        sysId: 'XVIEW-WA-AGENT',
-        stats: 'USUARIOS: 125,000/MES',
+        sysId: 'WA-SUPPORT-AGENT',
+        stats: 'USUARIOS: 100K+/MES',
         eyebrow: '● IA CONVERSACIONAL & SOPORTE TELCO',
-        title: 'Agente IA de Soporte TV por WhatsApp (XVIEW+) (2025 - 2026)',
+        title: 'Agente IA de Soporte TV por WhatsApp (2025 - 2026)',
         description:
-          'Reto y Arquitectura: Solución conversacional en producción mapeada sobre 29 intents de clientes en 1.5 meses. Integración de modelos generativos AWS con la API de WhatsApp Business, marcos de colaboración Huawei y evaluación rigurosa LLM-as-a-Judge.',
+          'Reto y Arquitectura: Solución conversacional en producción mapeada sobre 29 intents de clientes en 1.5 meses. Integración de modelos generativos AWS con la API de WhatsApp Business, marcos de proveedores externos y evaluación rigurosa LLM-as-a-Judge.',
         impactLabel: 'Impacto Cuantificado:',
         impact:
-          '125,000 usuarios mensuales; tasa de auto-resolución de 60–65%, conteniendo 75,000+ consultas mensuales con fallback humano click-to-call.',
-        tags: ['NLP', 'AWS Bedrock/LLMs', 'API de WhatsApp', 'Tecnología Huawei', 'LLM-as-a-Judge'],
+          '100K+ usuarios mensuales; tasa de auto-resolución del 60%+, conteniendo 70K+ consultas mensuales con fallback humano click-to-call.',
+        tags: ['NLP', 'AWS Bedrock/LLMs', 'API de WhatsApp', 'Integración de Proveedores', 'LLM-as-a-Judge'],
         diagram: 'whatsapp-agent',
         accent: '#ff8ff7',
         border: 'rgba(255,143,247,0.4)',
       },
       {
         sysId: 'VOICE-SIM-2026',
-        stats: 'RETENCIÓN: +50/MES',
+        stats: 'RETENCIÓN: MEJORADA',
         eyebrow: '● SIMULACIÓN DE VOZ EN TIEMPO REAL & MLOPS',
         title: 'Simulador de Call-Center para Capacitación con IA (2026)',
         description:
           'Reto y Arquitectura: Alta rotación y largos ciclos de onboarding. Arquitectura serverless en AWS (Bedrock, S3, DuckDB, DeepDub, API Gateway WebSocket) con generación dinámica de prompts sobre distintas personas y detección de errores de política.',
         impactLabel: 'Impacto Cuantificado:',
         impact:
-          'Redujo la rotación operativa en 50 agentes al mes; redujo el entrenamiento de 4 semanas a 8 días con puntuación en vivo.',
+          'Redujo notablemente la rotación operativa; redujo el entrenamiento de semanas a días con puntuación en vivo.',
         tags: ['AWS Bedrock', 'WebSocket', 'DuckDB', 'DeepDub', 'Serverless'],
         diagram: 'voice-sim',
         accent: '#39ff14',
         border: 'rgba(57,255,20,0.4)',
       },
       {
-        sysId: 'MEGAN-ENT-2026',
+        sysId: 'ENT-COPILOT-2026',
         stats: 'CORE::ENTERPRISE_RAG',
         eyebrow: '● COPILOTO INTERNO & INTELIGENCIA CORPORATIVA',
-        title: "'Megan' Asistente IA Empresarial (2026 - Activo)",
+        title: 'Copiloto IA Empresarial (2026 - Activo)',
         description:
           'Reto y Arquitectura: Gestión de producto empresarial de un copiloto generativo interno. Combina arquitecturas RAG propietarias con LLMs locales distribuidos (Ollama / vLLM) para búsqueda corporativa ultra-segura y aislada, automatización de RH y síntesis estratégica.',
         impactLabel: 'Impacto Estratégico:',
         impact:
-          'Potencia a los niveles ejecutivo y operativo con recuperación de conocimiento verificada en menos de 1 segundo bajo estricta soberanía de datos corporativa.',
+          'Potencia a los niveles ejecutivo y operativo con recuperación de conocimiento verificada en tiempo real bajo estricta soberanía de datos corporativa.',
         tags: ['PM Empresarial', 'Arquitectura RAG', 'LLMs Locales', 'Soberanía de Datos'],
         diagram: 'megan',
         accent: '#00ffff',
@@ -552,11 +550,11 @@ const es: Strings = {
         accent: '#00ffff',
         border: '#00ffff',
         description:
-          'Reportando directamente al Chief AI Officer (CAIO), dirigiendo el portafolio integral de inteligencia artificial que atiende a más de 150,000 usuarios mensuales. Liderando equipos multidisciplinarios en ingeniería conversacional, auditoría por visión por computadora y simulación de voz automatizada.',
+          'Reportando directamente al Chief AI Officer (CAIO), dirigiendo el portafolio integral de inteligencia artificial que atiende a más de 100,000 usuarios mensuales. Liderando equipos multidisciplinarios en ingeniería conversacional, auditoría por visión por computadora y simulación de voz automatizada.',
         details: [
           {
             title: '> Gobernanza Empresarial:',
-            text: 'Evaluando actualizaciones de Oracle Fusion Cloud HCM 26A/26B, selección de modelos generativos de lenguaje (GLMs) y cumplimiento de seguridad multi-nube.',
+            text: 'Evaluando sistemas empresariales (incluido Oracle Fusion Cloud HCM), selección de modelos generativos de lenguaje (GLMs) y cumplimiento de seguridad multi-nube.',
             color: '#00ffff',
           },
           {

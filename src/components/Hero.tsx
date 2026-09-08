@@ -191,7 +191,7 @@ export default function Hero() {
           </div>
           <div className="flex flex-col gap-1 overflow-x-auto font-code text-[14px] text-on-surface">
             <p className="text-tertiary-fixed-dim">
-              <span className="text-secondary-fixed-dim">root@megacable-ai-core:~$</span>{' '}
+              <span className="text-secondary-fixed-dim">root@ai-core-01:~$</span>{' '}
               {hero.terminal.cmd}
             </p>
             <p className="text-on-surface-variant">{hero.terminal.line1}</p>

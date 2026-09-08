@@ -40,7 +40,7 @@ function buildContent(lang: Lang): CvContent {
             {
               flush: true,
               bullets: [
-                'AI Project Manager and Software Engineer con experiencia práctica liderando transformación empresarial de IA, gestión de producto e implementación full-stack a escala. Actualmente responsable del ciclo de vida completo de iniciativas de IA que atienden a más de 150,000 usuarios combinados al mes entre el soporte al cliente y las operaciones de campo de Megacable, desde requisitos de negocio y evaluación de proveedores hasta la ejecución ágil con desarrollo asistido por IA (Vibecoding) y coordinación transversal con el Chief AI Officer. Base técnica sólida en lenguajes de programación, arquitecturas cloud (AWS, Azure, GCP) y diseño de sistemas RAG/LLM. Capaz de unir la estrategia de IA, la gobernanza corporativa y la ingeniería práctica para desplegar flujos de trabajo inteligentes seguros, medibles y altamente adoptados.',
+                'AI Project Manager and Software Engineer con experiencia práctica liderando transformación empresarial de IA, gestión de producto e implementación full-stack a escala. Actualmente responsable del ciclo de vida completo de iniciativas de IA que atienden a más de 100,000 usuarios combinados al mes entre el soporte al cliente y las operaciones de campo de Megacable, desde requisitos de negocio y evaluación de proveedores hasta la ejecución ágil con desarrollo asistido por IA (Vibecoding) y coordinación transversal con el Chief AI Officer. Base técnica sólida en lenguajes de programación, arquitecturas cloud (AWS, Azure, GCP) y diseño de sistemas RAG/LLM. Capaz de unir la estrategia de IA, la gobernanza corporativa y la ingeniería práctica para desplegar flujos de trabajo inteligentes seguros, medibles y altamente adoptados.',
               ],
             },
           ],
@@ -75,9 +75,9 @@ function buildContent(lang: Lang): CvContent {
               sub: 'Megacable — Guadalajara, México',
               period: '2025 – Actual',
               bullets: [
-                'Lidero el project management de extremo a extremo y la implementación técnica de iniciativas empresariales de IA, reportando al Chief AI Officer y coordinando con equipos multifuncionales y proveedores externos (Huawei, Meta).',
-                'Soy responsable del roadmap de un portafolio de agentes de IA en producción (soporte TV vía WhatsApp, auditor RAG de campo, simulador de voz de call-center, asistente empresarial "Megan") que atiende a más de 150,000 usuarios combinados al mes.',
-                'Realizo evaluaciones de capacidad técnica de sistemas empresariales (incluido Oracle Fusion Cloud HCM releases 26A/26B) y de modelos generativos de lenguaje (GLMs) para determinar costo, latencia, seguridad y alineación estratégica.',
+                'Lidero el project management de extremo a extremo y la implementación técnica de iniciativas empresariales de IA, reportando al Chief AI Officer y coordinando con equipos multifuncionales y proveedores externos.',
+                'Soy responsable del roadmap de un portafolio de agentes de IA en producción (soporte TV vía WhatsApp, auditor RAG de campo, simulador de voz de call-center, asistente empresarial) que atiende a más de 100,000 usuarios combinados al mes.',
+                'Realizo evaluaciones de capacidad técnica de sistemas empresariales (incluido Oracle Fusion Cloud HCM) y de modelos generativos de lenguaje (GLMs) para determinar costo, latencia, seguridad y alineación estratégica.',
                 'Diseño arquitecturas operativas y diagramas de flujo de procesos con Mermaid.js, PlantUML y Eraser.io para traducir necesidades complejas de negocio en entregables de ingeniería estructurados.',
                 'Impulso el prototipado rápido y la entrega de soluciones con metodologías Vibecoding (Desarrollo Asistido por IA), minimizando deuda técnica y acelerando el time-to-market.',
                 'Lidero la gestión de cambio empresarial para la adopción de Copilot Pro y NotebookLM, generando business cases, flujos de permisos y documentación ejecutiva.',
@@ -97,26 +97,26 @@ function buildContent(lang: Lang): CvContent {
           title: 'PROYECTOS E INICIATIVAS TÉCNICAS',
           entries: [
             {
-              title: 'RAG-Powered Field Service AI Auditor (CPK)',
-              tagsLine: 'RAG, Telemetría IoT, Procesamiento JSON, Prevención de Fraude',
+              title: 'RAG-Powered Field Service AI Auditor',
+              tagsLine: 'RAG, Telemetría IoT, Procesamiento JSON, Integridad de Validación',
               period: '2026',
               bullets: [
-                'Arquitecté un asistente de IA RAG (Retrieval-Augmented Generation) seguro integrado con una app móvil para guiar y auditar a técnicos de campo durante instalaciones de telecomunicaciones residenciales, validando actas mediante análisis de imagen y geolocalización para prevenir fraude.',
-                'Diseñé la ingesta de payloads complejos de telemetría JSON (Jitter, RSSI, potencia óptica, datos geoespaciales) capturados vía antenas Wi-Fi móviles.',
+                'Arquitecté un asistente de IA RAG (Retrieval-Augmented Generation) seguro integrado con una app móvil para guiar y auditar a técnicos de campo durante instalaciones de telecomunicaciones residenciales, validando actas mediante análisis de imagen y geolocalización para garantizar la integridad.',
+                'Diseñé la ingesta de payloads complejos de telemetría estructurada (señal de red, datos geoespaciales) capturados vía dispositivos móviles.',
                 'Correlacioné variables técnicas contra la política corporativa privada dentro de una base de conocimiento RAG aislada, generando reportes diagnósticos estructurados (impacto, causa raíz, plan de acción) y escalando tickets de forma autónoma cuando era necesario.',
-                'Escalé la adopción de 2,000 a 27,000 consultas mensuales iterando los prompts con base en el feedback de campo, estableciendo la IA como un copiloto técnico de confianza.',
+                'Escalé la adopción a decenas de miles de consultas mensuales iterando los prompts con base en el feedback de campo, estableciendo la IA como un copiloto técnico de confianza.',
               ],
             },
             {
-              title: 'WhatsApp TV Support AI Agent (XVIEW+)',
+              title: 'WhatsApp TV Support AI Agent',
               tagsLine: 'AI Product Management, NLP, AWS, Integración de APIs',
               period: '2025 – 2026',
               bullets: [
-                'Lideré el mapeo de procesos de extremo a extremo y el despliegue de un asistente IA de WhatsApp impulsado por NLP que atiende a 125,000 usuarios mensuales, en alianza con Huawei para la integración Meta/WhatsApp.',
-                'Logré una tasa de resolución automatizada de 60% – 65%, conteniendo más de 75,000 consultas mensuales; diseñé el enrutamiento de respaldo "Click to Call" a agentes humanos para escenarios no mapeados.',
+                'Lideré el mapeo de procesos de extremo a extremo y el despliegue de un asistente IA de WhatsApp impulsado por NLP que atiende a 100K+ usuarios mensuales, trabajando con proveedores externos para la integración Meta/WhatsApp.',
+                'Logré una tasa de resolución automatizada del 60%+, conteniendo más de 70K consultas mensuales; diseñé el enrutamiento de respaldo "Click to Call" a agentes humanos para escenarios no mapeados.',
                 'Evalué y desplegué un modelo generativo de lenguaje (GLM) optimizado en costo sobre AWS, seleccionado por latencia y métricas de rendimiento, para interpretar quejas técnicas de TV ambiguas en lenguaje natural.',
                 'Mapeé 29 intents de soporte desde cero en 1.5 meses e integré APIs RESTful (GET/POST) con una base de datos operativa de alta transacción para consultas de contrato, agendamiento y ticketing en tiempo real.',
-                'Diseñé un marco de evaluación "LLM-as-a-Judge" para monitorear latencia, coherencia y precisión de respuestas, alcanzando un score de calidad del 80% en el rollout de fase 1.',
+                'Diseñé un marco de evaluación "LLM-as-a-Judge" para monitorear latencia, coherencia y precisión de respuestas, sosteniendo un score de calidad alto en los rollouts.',
               ],
             },
             {
@@ -126,11 +126,11 @@ function buildContent(lang: Lang): CvContent {
               bullets: [
                 'Construí un simulador de voz IA en tiempo real que replica escenarios complejos de clientes para entrenar y evaluar agentes de call-center, con generación dinámica de prompts y perfiles de personalidad de clientes.',
                 'Diseñé una arquitectura AWS completamente serverless (Bedrock, S3, DuckDB, DeepDub, API Gateway WebSocket) que entrega voz en tiempo real, scoring de calidad por sesión y detección de errores fatales contra las políticas corporativas.',
-                'Reduje el tiempo de onboarding de nuevos agentes y la rotación de personal en 50 personas/mes dentro de los 3 primeros meses del lanzamiento, mejorando directamente la retención y la confianza de los agentes.',
+                'Reduje el tiempo de onboarding de nuevos agentes y la rotación de personal notablemente dentro de los primeros meses del lanzamiento, mejorando directamente la retención y la confianza de los agentes.',
               ],
             },
             {
-              title: '"Megan" Enterprise AI Assistant',
+              title: 'Enterprise AI Copilot',
               tagsLine: 'Product Management, RAG, Despliegue de LLMs Locales',
               period: '2026',
               bullets: [
@@ -189,7 +189,7 @@ function buildContent(lang: Lang): CvContent {
           {
             flush: true,
             bullets: [
-              'AI Project Manager and Software Engineer with hands-on experience leading enterprise AI transformation, product management, and full-stack implementation at scale. Currently own the end-to-end lifecycle of AI initiatives serving over 150,000 combined monthly users across Megacable\'s customer support and field operations, from business requirements and vendor evaluation to agile execution using AI-assisted development (Vibecoding) and cross-functional coordination with the Chief AI Officer. Strong technical foundation across programming languages, cloud architectures (AWS, Azure, GCP), and RAG/LLM system design. Skilled at bridging AI strategy, corporate governance, and hands-on engineering to ship secure, measurable, highly-adopted intelligent workflows.',
+              'AI Project Manager and Software Engineer with hands-on experience leading enterprise AI transformation, product management, and full-stack implementation at scale. Currently own the end-to-end lifecycle of AI initiatives serving over 100,000 combined monthly users across Megacable\'s customer support and field operations, from business requirements and vendor evaluation to agile execution using AI-assisted development (Vibecoding) and cross-functional coordination with the Chief AI Officer. Strong technical foundation across programming languages, cloud architectures (AWS, Azure, GCP), and RAG/LLM system design. Skilled at bridging AI strategy, corporate governance, and hands-on engineering to ship secure, measurable, highly-adopted intelligent workflows.',
             ],
           },
         ],
@@ -224,9 +224,9 @@ function buildContent(lang: Lang): CvContent {
             sub: 'Megacable — Guadalajara, Mexico',
             period: '2025 – Present',
             bullets: [
-              'Lead end-to-end project management and technical implementation of enterprise AI initiatives, reporting to the Chief AI Officer and coordinating with cross-functional teams and external vendors (Huawei, Meta).',
-              'Own the roadmap for a portfolio of production AI agents (WhatsApp TV support, field-service RAG auditor, call-center voice simulator, enterprise assistant "Megan") serving over 150,000 combined monthly users.',
-              'Conduct technical capability evaluations of enterprise systems (including Oracle Fusion Cloud HCM releases 26A/26B) and Generative Language Models (GLMs) to determine cost, latency, security, and strategic alignment.',
+              'Lead end-to-end project management and technical implementation of enterprise AI initiatives, reporting to the Chief AI Officer and coordinating with cross-functional teams and external vendors.',
+              'Own the roadmap for a portfolio of production AI agents (WhatsApp TV support, field-service RAG auditor, call-center voice simulator, enterprise assistant) serving over 100,000 combined monthly users.',
+              'Conduct technical capability evaluations of enterprise systems (including Oracle Fusion Cloud HCM) and Generative Language Models (GLMs) to determine cost, latency, security, and strategic alignment.',
               'Design operational architectures and process flowcharts utilizing Mermaid.js, PlantUML, and Eraser.io to translate complex business needs into structured engineering deliverables.',
               'Drive rapid prototyping and solution delivery leveraging Vibecoding (AI-Assisted Development) methodologies, minimizing technical debt and accelerating time-to-market.',
               'Spearhead enterprise change management for Copilot Pro and NotebookLM adoption, generating business cases, permission workflows, and executive documentation.',
@@ -246,26 +246,26 @@ function buildContent(lang: Lang): CvContent {
         title: 'PROJECTS & TECHNICAL INITIATIVES',
         entries: [
           {
-            title: 'RAG-Powered Field Service AI Auditor (CPK)',
-            tagsLine: 'RAG, IoT Telemetry, JSON Processing, Fraud Prevention',
+            title: 'RAG-Powered Field Service AI Auditor',
+            tagsLine: 'RAG, IoT Telemetry, JSON Processing, Validation Integrity',
             period: '2026',
             bullets: [
-              'Architected a secure Retrieval-Augmented Generation (RAG) AI assistant integrated with a mobile app to guide and audit field technicians during residential telecom installations, validating actas via image and geolocation analysis to prevent fraud.',
-              'Engineered ingestion of complex JSON telemetry payloads (Jitter, RSSI, optical power, geospatial data) captured via mobile Wi-Fi antennas.',
+              'Architected a secure Retrieval-Augmented Generation (RAG) AI assistant integrated with a mobile app to guide and audit field technicians during residential telecom installations, validating actas via image and geolocation analysis to ensure integrity.',
+              'Engineered ingestion of complex structured telemetry payloads (network signal, geospatial data) captured via mobile devices.',
               'Correlated technical variables against private corporate policy within an isolated RAG knowledge base, generating structured diagnostic reports (impact, root cause, action plan) and autonomously escalating tickets when needed.',
-              'Scaled adoption from 2,000 to 27,000 monthly queries by iterating on prompts based on field feedback, establishing the AI as a trusted technical copilot.',
+              'Scaled adoption to tens of thousands of monthly queries by iterating on prompts based on field feedback, establishing the AI as a trusted technical copilot.',
             ],
           },
           {
-            title: 'WhatsApp TV Support AI Agent (XVIEW+)',
+            title: 'WhatsApp TV Support AI Agent',
             tagsLine: 'AI Product Management, NLP, AWS, API Integration',
             period: '2025 – 2026',
             bullets: [
-              'Led end-to-end process mapping and deployment of an NLP-powered WhatsApp AI assistant serving 125,000 monthly users, partnering with Huawei for Meta/WhatsApp integration.',
-              'Achieved a 60% – 65% automated resolution rate, containing over 75,000 inquiries monthly; engineered "Click to Call" fallback routing for unmapped scenarios to human agents.',
+              'Led end-to-end process mapping and deployment of an NLP-powered WhatsApp AI assistant serving 100K+ monthly users, working with external vendors for Meta/WhatsApp integration.',
+              'Achieved a 60%+ automated resolution rate, containing 70K+ inquiries monthly; engineered "Click to Call" fallback routing for unmapped scenarios to human agents.',
               'Evaluated and deployed a cost-optimized Generative Language Model (GLM) on AWS, selected on latency and performance metrics, to interpret ambiguous natural-language TV technical complaints.',
               'Mapped 29 support intents from scratch in 1.5 months and integrated RESTful APIs (GET/POST) with a high-transaction operational database for real-time contract lookups, scheduling, and ticketing.',
-              'Designed an "LLM-as-a-Judge" evaluation framework to monitor response latency, coherence, and accuracy, reaching an 80% quality score in the phase 1 rollout.',
+              'Designed an "LLM-as-a-Judge" evaluation framework to monitor response latency, coherence, and accuracy, sustaining a high quality score across rollouts.',
             ],
           },
           {
@@ -275,11 +275,11 @@ function buildContent(lang: Lang): CvContent {
             bullets: [
               'Built a real-time AI voice simulator that replicates complex customer scenarios to train and evaluate call-center agents, using dynamic prompt generation and customer personality profiles.',
               'Designed a fully serverless AWS architecture (Bedrock, S3, DuckDB, DeepDub, API Gateway WebSocket) delivering real-time voice, per-session quality scoring, and fatal-error detection against corporate policy adherence.',
-              'Cut new-hire onboarding time and reduced staff turnover by 50 people/month within 3 months of launch, directly improving retention and agent confidence.',
+              'Cut new-hire onboarding time and significantly reduced staff turnover within months of launch, directly improving retention and agent confidence.',
             ],
           },
           {
-            title: '"Megan" Enterprise AI Assistant',
+            title: 'Enterprise AI Copilot',
             tagsLine: 'Product Management, RAG, Local LLM Deployment',
             period: '2026',
             bullets: [
